@@ -1,7 +1,7 @@
 #ifndef UNIVERSAL_FORWARD_UBER_PASS_INCLUDED
 #define UNIVERSAL_FORWARD_UBER_PASS_INCLUDED
 
-#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+#include "UberLighting.hlsl"
 
 
 
@@ -115,7 +115,7 @@ half4 LitPassFragment(Varyings input) : SV_Target
    
     half4 color = UniversalFragmentPBR(inputData, surfaceData);
 
-    color.rgb = MixFog(color.rgb, inputData.fogCoord);
+    
     color.a = OutputAlpha(color.a, _Surface);
 
     return color;

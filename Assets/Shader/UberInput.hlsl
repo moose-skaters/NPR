@@ -26,6 +26,7 @@ half _ClearCoatSmoothness;
 half _DetailAlbedoMapScale;
 half _DetailNormalMapScale;
 half _Surface;
+half _EmissionScale;
 CBUFFER_END
 
 TEXTURE2D(_MetallicGlossMap);   SAMPLER(sampler_MetallicGlossMap);
@@ -36,10 +37,16 @@ TEXTURE2D(_MetallicGlossMap);   SAMPLER(sampler_MetallicGlossMap);
 real3 UnpackNormalGBA(real4 packedNormal, real scale = 1.0)
 {
     real3 normal;
-    normal.xyz = packedNormal.gba * 2.0 - 1.0;
+    normal.y = 1 - packedNormal.y;
+    normal.x = packedNormal.x * packedNormal.a;
+    
+    normal.xy = normal.xy * 2.0 - 1.0;
+    normal.z = max(1.0e-16, sqrt(1.0 - saturate(dot(normal.xy, normal.xy))));
     normal.xy *= scale;
     return normal;
+    
 }
+
 inline void InitializeStandardLitSurfaceData(float2 uv, out SurfaceData outSurfaceData)
 {
     half4 albedoAlpha = SampleAlbedoAlpha(uv, TEXTURE2D_ARGS(_BaseMap, sampler_BaseMap));
@@ -55,7 +62,7 @@ inline void InitializeStandardLitSurfaceData(float2 uv, out SurfaceData outSurfa
     outSurfaceData.normalTS = UnpackNormalGBA(n, _BumpScale);
     outSurfaceData.occlusion = specGloss.b;
     outSurfaceData.occlusion = LerpWhiteTo(outSurfaceData.occlusion,_OcclusionStrength);
-    outSurfaceData.emission = SampleEmission(uv, _EmissionColor.rgb, TEXTURE2D_ARGS(_EmissionMap, sampler_EmissionMap));
+    outSurfaceData.emission = specGloss.a * outSurfaceData.albedo * _EmissionScale;
 
     outSurfaceData.clearCoatMask       = half(0.0);
     outSurfaceData.clearCoatSmoothness = half(0.0);

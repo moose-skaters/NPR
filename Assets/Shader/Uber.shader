@@ -8,8 +8,9 @@ Shader "Unlit/Uber"
         _Metallic("Metallic", Range(0.0, 1.0)) = 0.0
         _OcclusionStrength("OcclusionStrength",Range(0,1)) = 1
         _MetallicGlossMap("Metallic", 2D) = "white" {}
-        _BumpScale("Scale", Float) = 1.0
-        _BumpMap("Normal Map", 2D) = "bump" {}
+        _EmissionScale("_EmissionScale",Range(0,5)) = 0
+        _BumpScale("Scale", Range(1,4)) = 1.0
+        _BumpMap("Normal Map", 2D) = "white" {}
     }
     SubShader
     {
