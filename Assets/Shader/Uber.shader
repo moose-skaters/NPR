@@ -7,14 +7,14 @@ Shader "Unlit/Uber"
         _Smoothness("Smoothness", Range(0.0, 1.0)) = 0.5
         _Metallic("Metallic", Range(0.0, 1.0)) = 0.0
         _OcclusionStrength("OcclusionStrength",Range(0,1)) = 1
-        _MetallicGlossMap("Metallic", 2D) = "white" {}
+        _MetallicGlossMap("Metallic", 2D) = "black" {}
         _EmissionScale("_EmissionScale",Range(0,5)) = 0
         _BumpScale("Scale", Range(1,4)) = 1.0
         _BumpMap("Normal Map", 2D) = "white" {}
         
         _RampTex("RampTex", 2D)    = "white" {}
         
-       _OutlineAdj01 ("描边距离范围x近处-y中间-z远距离",vector) = (0.01,2,6,0)
+        _OutlineAdj01 ("描边距离范围x近处-y中间-z远距离",vector) = (0.01,2,6,0)
         _OutlineAdj02 ("描边范围缩放因子x近处-y中间-z远距离",vector) = (0.5, 0.74, 1.5, 0)
         _OutlineWidth ("描边粗细",float) = 0.56
         _OutlineScaleFactor ("描边缩放因子",float) = 0.00001
