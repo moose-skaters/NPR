@@ -1,5 +1,5 @@
-#ifndef UNIVERSAL_FORWARD_UBER_PASS_INCLUDED
-#define UNIVERSAL_FORWARD_UBER_PASS_INCLUDED
+#ifndef UNIVERSAL_FORWARD_UBER_OUTLINE_PASS_INCLUDED
+#define UNIVERSAL_FORWARD_UBER_OUTLINE_PASS_INCLUDED
 
 #include "UberLighting.hlsl"
 
@@ -17,10 +17,19 @@ struct Attributes
 struct Varyings
 {
     float2 uv                       : TEXCOORD0;
+
+
     float3 positionWS               : TEXCOORD1;
+
+
     float3 normalWS                 : TEXCOORD2;
-    half4  tangentWS                : TEXCOORD3;    // xyz: tangent, w: sign
-    float4 color                    : TEXCOORD4;
+
+    half4 tangentWS                 : TEXCOORD3;    // xyz: tangent, w: sign
+
+
+
+   
+    
     DECLARE_LIGHTMAP_OR_SH(staticLightmapUV, vertexSH, 8);
     float4 positionCS               : SV_POSITION;
     UNITY_VERTEX_INPUT_INSTANCE_ID
@@ -51,6 +60,8 @@ void InitializeInputData(Varyings input, half3 normalTS, out InputData inputData
     inputData.bakedGI = SAMPLE_GI(input.staticLightmapUV, input.vertexSH, inputData.normalWS);
     inputData.normalizedScreenSpaceUV = GetNormalizedScreenSpaceUV(input.positionCS);
     inputData.shadowMask = SAMPLE_SHADOWMASK(input.staticLightmapUV);
+
+   
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -58,7 +69,7 @@ void InitializeInputData(Varyings input, half3 normalTS, out InputData inputData
 ///////////////////////////////////////////////////////////////////////////////
 
 // Used in Standard (Physically Based) shader
-Varyings LitPassVertex(Attributes input)
+Varyings LitPassOutlineVertex(Attributes input)
 {
     Varyings output = (Varyings)0;
 
@@ -67,48 +78,29 @@ Varyings LitPassVertex(Attributes input)
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(output);
 
     VertexPositionInputs vertexInput = GetVertexPositionInputs(input.positionOS.xyz);
-
-    // normalWS and tangentWS already normalize.
-    // this is required to avoid skewing the direction during interpolation
-    // also required for per-vertex lighting and SH evaluation
     VertexNormalInputs normalInput = GetVertexNormalInputs(input.normalOS, input.tangentOS);
     
     output.uv = TRANSFORM_TEX(input.texcoord, _BaseMap);
-
+    float3 normalVS = TransformWorldToViewDir(normalInput.normalWS,true);
+    float3 viewDir = normalize(vertexInput.positionVS) * 0.01;
+    float outlineFactor = GenShinGetOutlineCameraFovAndDistanceFixMultiplier(vertexInput.positionVS.z,1,_OutlineScaleFactor,_OutlineWidth,_OutlineAdj01,_OutlineAdj02);
+    float3 OffsetPositionVS = ApplyOutlineOffsetViewSpace(vertexInput.positionVS,viewDir,_OutlineZOffset,normalVS,outlineFactor);
+    
     // already normalized from normal transform to WS.
-    output.normalWS = normalInput.normalWS;
-    real sign = input.tangentOS.w * GetOddNegativeScale();
-    half4 tangentWS = half4(normalInput.tangentWS.xyz, sign);
-    output.tangentWS = tangentWS;
     
-    OUTPUT_SH(output.normalWS.xyz, output.vertexSH);
-    output.positionWS = vertexInput.positionWS;
-    output.positionCS = vertexInput.positionCS;
-    output.color      = input.color;
-    
+    output.positionCS = TransformWViewToHClip(OffsetPositionVS);
+
     return output;
 }
 
 // Used in Standard (Physically Based) shader
-half4 LitPassFragment(Varyings input) : SV_Target
+half4 LitPassOutlineFragment(Varyings input) : SV_Target
 {
     UNITY_SETUP_INSTANCE_ID(input);
     UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
-
-
-
-    SurfaceData surfaceData;
-    InitializeStandardLitSurfaceData(input.uv, surfaceData);
-
-    InputData inputData;
-    InitializeInputData(input, surfaceData.normalTS, inputData);
-   
-    half4 color = UniversalFragmentPBR(inputData, surfaceData);
-
     
-    color.a = OutputAlpha(color.a, _Surface);
-
-    
+    half4 color = 0;
+    color.a     = 1;
     return color;
 }
 

@@ -27,10 +27,19 @@ half _DetailAlbedoMapScale;
 half _DetailNormalMapScale;
 half _Surface;
 half _EmissionScale;
+
+
+
+
+half4 _OutlineAdj01;
+half4 _OutlineAdj02;
+half _OutlineWidth;
+half _OutlineScaleFactor;
+half _OutlineZOffset;
 CBUFFER_END
 
 TEXTURE2D(_MetallicGlossMap);   SAMPLER(sampler_MetallicGlossMap);
-
+TEXTURE2D(_RampTex);            SAMPLER(sampler_RampTex);
 
 
 
@@ -39,12 +48,10 @@ real3 UnpackNormalGBA(real4 packedNormal, real scale = 1.0)
     real3 normal;
     normal.y = 1 - packedNormal.y;
     normal.x = packedNormal.x * packedNormal.a;
-    
     normal.xy = normal.xy * 2.0 - 1.0;
     normal.z = max(1.0e-16, sqrt(1.0 - saturate(dot(normal.xy, normal.xy))));
     normal.xy *= scale;
     return normal;
-    
 }
 
 inline void InitializeStandardLitSurfaceData(float2 uv, out SurfaceData outSurfaceData)

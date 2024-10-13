@@ -11,6 +11,14 @@ Shader "Unlit/Uber"
         _EmissionScale("_EmissionScale",Range(0,5)) = 0
         _BumpScale("Scale", Range(1,4)) = 1.0
         _BumpMap("Normal Map", 2D) = "white" {}
+        
+        _RampTex("RampTex", 2D)    = "white" {}
+        
+       _OutlineAdj01 ("描边距离范围x近处-y中间-z远距离",vector) = (0.01,2,6,0)
+        _OutlineAdj02 ("描边范围缩放因子x近处-y中间-z远距离",vector) = (0.5, 0.74, 1.5, 0)
+        _OutlineWidth ("描边粗细",float) = 0.56
+        _OutlineScaleFactor ("描边缩放因子",float) = 0.00001
+        _OutlineZOffset ("描边视角方向偏移",float) = 0
     }
     SubShader
     {
@@ -26,9 +34,7 @@ Shader "Unlit/Uber"
             // no LightMode tag are also rendered by Universal Render Pipeline
             Name "ForwardLit"
             Tags{"LightMode" = "UniversalForward"}
-
-          
-
+            Cull Back
             HLSLPROGRAM
             #pragma exclude_renderers gles gles3 glcore
             #pragma target 4.5
@@ -77,7 +83,40 @@ Shader "Unlit/Uber"
             #include "UberForwardPass.hlsl"
             ENDHLSL
         }
+        
+        Pass
+        {
+            // Lightmode matches the ShaderPassName set in UniversalRenderPipeline.cs. SRPDefaultUnlit and passes with
+            // no LightMode tag are also rendered by Universal Render Pipeline
+            Name "Outline"
+            Tags{"LightMode" = "SRPDefaultUnlit"}
+            Cull Front
+            HLSLPROGRAM
+            #pragma exclude_renderers gles gles3 glcore
+            #pragma target 4.5
 
+            // -------------------------------------
+            // Material Keywords
+            // -------------------------------------
+            // Universal Pipeline keywords
+            // -------------------------------------
+            // Unity defined keywords
+            //--------------------------------------
+            // GPU Instancing
+            #pragma multi_compile_instancing
+            #pragma instancing_options renderinglayer
+            #pragma multi_compile _ DOTS_INSTANCING_ON
+
+            #pragma vertex   LitPassOutlineVertex
+            #pragma fragment LitPassOutlineFragment
+
+            #include "UberInput.hlsl"
+            #include "UberLightingCore.hlsl"
+            #include "UberForwardPassOutline.hlsl"
+            ENDHLSL
+        }
+        
+        
         Pass
         {
             Name "ShadowCaster"
