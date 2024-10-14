@@ -117,7 +117,10 @@ Material:
     - _OutlineZOffset: 0
     - _Parallax: 0.005
     - _QueueOffset: 0
+    - _RampMax: 1
+    - _RampMin: 0
     - _ReceiveShadows: 1
+    - _Skin: 0
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

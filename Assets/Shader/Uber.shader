@@ -2,7 +2,8 @@ Shader "Unlit/Uber"
 {
     Properties
     {
-       [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
+        [Toggle]_Skin("Skin",Float) = 0.0
+        [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
         [MainColor] _BaseColor("Color", Color) = (1,1,1,1)
         _Smoothness("Smoothness", Range(0.0, 1.0)) = 0.5
         _Metallic("Metallic", Range(0.0, 1.0)) = 0.0
@@ -10,10 +11,11 @@ Shader "Unlit/Uber"
         _MetallicGlossMap("Metallic", 2D) = "black" {}
         _EmissionScale("_EmissionScale",Range(0,5)) = 0
         _BumpScale("Scale", Range(1,4)) = 1.0
-        _BumpMap("Normal Map", 2D) = "white" {}
+        _BumpMap("Normal Map", 2D) = "bump" {}
         
         _RampTex("RampTex", 2D)    = "white" {}
-        
+        _RampMin("RampMin", Range(0,1)) = 0.0
+        _RampMax("RampMax", Range(0,1)) = 1.0
         _OutlineAdj01 ("描边距离范围x近处-y中间-z远距离",vector) = (0.01,2,6,0)
         _OutlineAdj02 ("描边范围缩放因子x近处-y中间-z远距离",vector) = (0.5, 0.74, 1.5, 0)
         _OutlineWidth ("描边粗细",float) = 0.56
@@ -48,7 +50,7 @@ Shader "Unlit/Uber"
             #pragma shader_feature_local_fragment _SPECULARHIGHLIGHTS_OFF
             #pragma shader_feature_local_fragment _ENVIRONMENTREFLECTIONS_OFF
             #pragma shader_feature_local_fragment _SPECULAR_SETUP
-
+            #pragma shader_feature_local_fragment _ _SKIN_ON 
             // -------------------------------------
             // Universal Pipeline keywords
             #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN

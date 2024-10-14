@@ -2,14 +2,14 @@ Shader "Unlit/Face"
 {
     Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}
+        _BaseMap ("Texture", 2D) = "white" {}
     }
     SubShader
     {
         Tags{"RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline" "UniversalMaterialType" = "Lit" "IgnoreProjector" = "True" "ShaderModel"="4.5"}
      
 
-         Pass
+        Pass
         {
             // Lightmode matches the ShaderPassName set in UniversalRenderPipeline.cs. SRPDefaultUnlit and passes with
             // no LightMode tag are also rendered by Universal Render Pipeline
@@ -22,12 +22,7 @@ Shader "Unlit/Face"
 
             // -------------------------------------
             // Material Keywords
-         
-           
-          
-            #pragma multi_compile_fog
             
-
             //--------------------------------------
             // GPU Instancing
             #pragma multi_compile_instancing
@@ -37,8 +32,8 @@ Shader "Unlit/Face"
             #pragma vertex LitPassVertex
             #pragma fragment LitPassFragment
 
-            #include "UberInput.hlsl"
-            #include "UberForwardPass.hlsl"
+            #include "FaceInput.hlsl"
+            #include "FaceForwardPass.hlsl"
             ENDHLSL
         }
     }

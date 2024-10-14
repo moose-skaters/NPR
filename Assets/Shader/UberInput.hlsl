@@ -27,7 +27,8 @@ half _DetailAlbedoMapScale;
 half _DetailNormalMapScale;
 half _Surface;
 half _EmissionScale;
-
+half _RampMin;
+half _RampMax;
 
 
 

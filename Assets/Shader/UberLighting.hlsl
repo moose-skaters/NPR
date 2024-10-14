@@ -41,7 +41,10 @@ half3 LightingPhysicallyBased(BRDFData brdfData, BRDFData brdfDataClearCoat,
     half3 normalWS, half3 viewDirectionWS,
     half clearCoatMask, bool specularHighlightsOff)
 {
-    half NdotL = saturate(dot(normalWS, lightDirectionWS)*0.5 +0.5);
+    half NdotL = saturate(dot(normalWS, lightDirectionWS));
+    #if defined _SKIN_ON
+    NdotL      = smoothstep(_RampMin,_RampMax,NdotL);
+    #endif
     half4 RampDiffuse = SAMPLE_TEXTURE2D(_RampTex, sampler_RampTex, half2(NdotL,0.125));
     half4 RampSpecular = SAMPLE_TEXTURE2D(_RampTex, sampler_RampTex, half2(NdotL,0.375));
     half3 radianceDiffuse = lightColor * (lightAttenuation * RampDiffuse);
