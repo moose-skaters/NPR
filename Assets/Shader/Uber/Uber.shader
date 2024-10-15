@@ -2,6 +2,7 @@ Shader "Unlit/Uber"
 {
     Properties
     {
+        _Cull("__cull", Float) = 2.0
         [Toggle]_Skin("Skin",Float) = 0.0
         [Toggle]_Hair("Hair",Float) = 0.0
         [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
@@ -37,11 +38,11 @@ Shader "Unlit/Uber"
             // no LightMode tag are also rendered by Universal Render Pipeline
             Name "ForwardLit"
             Tags{"LightMode" = "UniversalForward"}
-            Cull Back
+            Cull [_Cull]
             HLSLPROGRAM
             #pragma exclude_renderers gles gles3 glcore
             #pragma target 4.5
-
+            
             // -------------------------------------
             // Material Keywords
          
