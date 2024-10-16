@@ -2,18 +2,24 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: c_Sharkry_slg_fringeuber
-  m_Shader: {fileID: 4800000, guid: 40c929049b887ad4eb688b9e8d58fb57, type: 3}
-  m_ShaderKeywords: _ANISOTROPIC_SPECULAR _BLEND_UV2 _RAMPMAP _SHADOW_ADDITIONAL_BIAS
+  m_Shader: {fileID: 4800000, guid: 8618a2cfcae44624a8b5662fa4446950, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _ANISOTROPIC_SPECULAR
+  - _BLEND_UV2
+  - _RAMPMAP
+  - _SHADERENUM_BASE
+  - _SHADOW_ADDITIONAL_BIAS
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2014
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses:
   - GFCharDirOutlineEx
@@ -40,6 +46,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _RMOTex:
         m_Texture: {fileID: 2800000, guid: b8e25c6090fb63b4d970c044972ef160, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -48,6 +58,11 @@ Material:
         m_Texture: {fileID: 2800000, guid: 2edda1a1efb6fb34d82d1bd222887d87, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _RampTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AdjustShadowBias: 1
     - _AnisotropicSpecular: 1
@@ -56,6 +71,7 @@ Material:
     - _AoeSelect: 0
     - _BaseInsideLerp: 0
     - _BlendSmoothness: 0.1
+    - _BumpScale: 1
     - _CampColorIndex: 1
     - _CharSaturation: 0
     - _ConcealLerp: 0
@@ -64,9 +80,11 @@ Material:
     - _DirOutlineWidthExt: 0
     - _DissolveIntensity: 0
     - _DoubleSided: 0
+    - _EmissionScale: 0
     - _EmissiveIntensity: 1
     - _FakeIntensity: 0.25
     - _FurShellThickness: 0.5
+    - _Hair: 0
     - _HolographicIntensity: 0
     - _HolographicWidth: 200
     - _InsideColorBias: 0.5
@@ -74,14 +92,23 @@ Material:
     - _InsideHeightBias: 0
     - _InsideHeightContrast: 1
     - _LightIndex: 0
+    - _Metallic: 0
+    - _OcclusionStrength: 1
     - _OutlineIntensity: 1
     - _OutlineOffset: 0
-    - _OutlineWidth: 3
+    - _OutlineScaleFactor: 0.00001
+    - _OutlineWidth: 1
     - _OutlineZBias: 0
+    - _OutlineZOffset: 0
+    - _RampMax: 1
+    - _RampMin: 0
     - _ReflectionFresnelF0: 0
     - _ReflectionIntensity: 0.35
     - _SSSIntensity: 0.5
+    - _ShaderEnum: 0
     - _ShadowBiasDistance: 0
+    - _Skin: 0
+    - _Smoothness: 0.5
     - _StencilComp: 6
     - _StencilOp: 2
     - _StencilRefC: 204
@@ -89,6 +116,7 @@ Material:
     - _StencilRefE: 204
     - _StencilRefF: 200
     - _StencilRefH: 203
+    - _Stocking: 0
     - _StockingFalloffPower: 1
     - _Tutorial: 0
     - _UpAxis: 0
@@ -103,14 +131,21 @@ Material:
     - _UseSubsurfaceScattering: 0
     - _UseVolumetricEffect: 0
     - _WriteMask: 248
+    - _fresnelIndensity: 5
+    - _fresnelScale: 1
     m_Colors:
     - _AoeSelectColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     - _FinalTint: {r: 1, g: 1, b: 1, a: 1}
     - _HolographicColor: {r: 1, g: 1, b: 1, a: 1}
     - _InsideBaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _OutlineAdj01: {r: 0.01, g: 2, b: 6, a: 0}
+    - _OutlineAdj02: {r: 0.5, g: 0.74, b: 1.5, a: 0}
     - _OutlineColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _OutlineShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _StockingCenterColor: {r: 1, g: 1, b: 1, a: 1}
     - _StockingFalloffColor: {r: 0.09999997, g: 0, b: 0, a: 1}
     - _TutorialColor: {r: 1, g: 1, b: 1, a: 1}
+    - _fresnelCenterColor: {r: 1, g: 1, b: 1, a: 1}
+    - _fresnelFallOffColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

@@ -30,6 +30,10 @@ half _EmissionScale;
 half _RampMin;
 half _RampMax;
 
+float _fresnelScale;
+float _fresnelIndensity;
+float3 _fresnelFallOffColor;
+float3 _fresnelCenterColor;
 
 
 half4 _OutlineAdj01;

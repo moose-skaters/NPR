@@ -12,17 +12,28 @@ Shader "Unlit/Uber"
         _OcclusionStrength("OcclusionStrength",Range(0,1)) = 1
         _MetallicGlossMap("Metallic", 2D) = "black" {}
         _EmissionScale("_EmissionScale",Range(0,5)) = 0
-        _BumpScale("Scale", Range(1,4)) = 1.0
+        _BumpScale("Scale", Range(0,4)) = 1.0
         _BumpMap("Normal Map", 2D) = "bump" {}
+        [Toggle]_Stocking("Stocking",Float) = 0.0
+        _fresnelScale("fresnelScale", Range(0, 1)) = 1
+		_fresnelIndensity("fresnelIndensity", Range(0, 5)) = 5
+        _fresnelCenterColor("fresnelCenterColor",Color) = (1,1,1,1)
+        _fresnelFallOffColor("fresnelCenterColor",Color) = (1,1,1,1)
         
+        
+        
+        [Header(Ramp)]
         _RampTex("RampTex", 2D)    = "white" {}
         _RampMin("RampMin", Range(0,1)) = 0.0
         _RampMax("RampMax", Range(0,1)) = 1.0
+        
+        [Header(Outline)]
         _OutlineAdj01 ("描边距离范围x近处-y中间-z远距离",vector) = (0.01,2,6,0)
         _OutlineAdj02 ("描边范围缩放因子x近处-y中间-z远距离",vector) = (0.5, 0.74, 1.5, 0)
         _OutlineWidth ("描边粗细",float) = 0.56
         _OutlineScaleFactor ("描边缩放因子",float) = 0.00001
         _OutlineZOffset ("描边视角方向偏移",float) = 0
+        [KeywordEnum(Base,Face,Hair,Eye)] _ShaderEnum("Shader类型", int) = 0
     }
     SubShader
     {
@@ -54,7 +65,7 @@ Shader "Unlit/Uber"
             #pragma shader_feature_local_fragment _SPECULAR_SETUP
             #pragma shader_feature_local_fragment _ _SKIN_ON
             #pragma shader_feature_local_fragment _ _HAIR_ON
-            
+            #pragma shader_feature_local_fragment _ _STOCKING_ON
             // -------------------------------------
             // Universal Pipeline keywords
             #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN

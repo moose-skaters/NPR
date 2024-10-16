@@ -102,7 +102,11 @@ half4 LitPassFragment(Varyings input) : SV_Target
 
     InputData inputData;
     InitializeInputData(input, surfaceData.normalTS, inputData);
-   
+    #if defined _STOCKING_ON
+    float fresnel = _fresnelScale*pow( dot(inputData.normalWS, inputData.viewDirectionWS), _fresnelIndensity);
+    float3 fresnelColor = lerp(_fresnelFallOffColor,_fresnelCenterColor,fresnel);
+    surfaceData.albedo *= fresnelColor;
+    #endif
     half4 color = UniversalFragmentPBR(inputData, surfaceData);
 
     

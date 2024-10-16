@@ -11,8 +11,10 @@ Material:
   m_Shader: {fileID: 4800000, guid: 8618a2cfcae44624a8b5662fa4446950, type: 3}
   m_ValidKeywords:
   - _ALPHATEST_ON
+  - _STOCKING_ON
   m_InvalidKeywords:
   - _RAMPMAP
+  - _SHADERENUM_BASE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -72,7 +74,7 @@ Material:
     - _AoeSelect: 0
     - _BaseInsideLerp: 0
     - _BlendSmoothness: 0.1
-    - _BumpScale: 1
+    - _BumpScale: 0
     - _CampColorIndex: 0
     - _CharSaturation: 0
     - _ConcealLerp: 0
@@ -93,12 +95,12 @@ Material:
     - _InsideHeightBias: 0
     - _InsideHeightContrast: 1
     - _LightIndex: 0
-    - _Metallic: 0
+    - _Metallic: 1
     - _OcclusionStrength: 1
     - _OutlineIntensity: 1
     - _OutlineOffset: 0
-    - _OutlineScaleFactor: 0.00001
-    - _OutlineWidth: 0
+    - _OutlineScaleFactor: 0.0001
+    - _OutlineWidth: 0.2
     - _OutlineZBias: 0
     - _OutlineZOffset: 0
     - _RampMax: 1
@@ -106,9 +108,10 @@ Material:
     - _ReflectionFresnelF0: 0
     - _ReflectionIntensity: 0.35
     - _SSSIntensity: 0.5
+    - _ShaderEnum: 0
     - _ShadowBiasDistance: 0.1
     - _Skin: 0
-    - _Smoothness: 0.582
+    - _Smoothness: 1
     - _StencilComp: 0
     - _StencilOp: 2
     - _StencilRefC: 200
@@ -116,6 +119,7 @@ Material:
     - _StencilRefE: 204
     - _StencilRefF: 200
     - _StencilRefH: 203
+    - _Stocking: 1
     - _StockingFalloffPower: 0.91
     - _Tutorial: 0
     - _UpAxis: 0
@@ -130,6 +134,8 @@ Material:
     - _UseSubsurfaceScattering: 0
     - _UseVolumetricEffect: 0
     - _WriteMask: 255
+    - _fresnelIndensity: 0.36
+    - _fresnelScale: 1
     m_Colors:
     - _AoeSelectColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
@@ -143,4 +149,6 @@ Material:
     - _StockingCenterColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
     - _StockingFalloffColor: {r: 0.09946037, g: 0.09531863, b: 0.13207549, a: 1}
     - _TutorialColor: {r: 1, g: 1, b: 1, a: 1}
+    - _fresnelCenterColor: {r: 0.64, g: 0.64, b: 0.64, a: 1}
+    - _fresnelFallOffColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   m_BuildTextureStacks: []
