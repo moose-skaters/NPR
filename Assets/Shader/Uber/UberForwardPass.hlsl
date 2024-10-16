@@ -11,6 +11,7 @@ struct Attributes
     float3 normalOS     : NORMAL;
     float4 tangentOS    : TANGENT;
     float2 texcoord     : TEXCOORD0;
+    float2 texcoord1    : TEXCOORD1;
     float4 color        : COLOR;
 };
 
@@ -21,6 +22,7 @@ struct Varyings
     float3 normalWS                 : TEXCOORD2;
     half4  tangentWS                : TEXCOORD3;    // xyz: tangent, w: sign
     float4 color                    : TEXCOORD4;
+    float2 uv1                      : TEXCOORD5;
     DECLARE_LIGHTMAP_OR_SH(staticLightmapUV, vertexSH, 8);
     float4 positionCS               : SV_POSITION;
     UNITY_VERTEX_INPUT_INSTANCE_ID
@@ -85,7 +87,7 @@ Varyings LitPassVertex(Attributes input)
     output.positionWS = vertexInput.positionWS;
     output.positionCS = vertexInput.positionCS;
     output.color      = input.color;
-    
+    output.uv1        = input.texcoord1;
     return output;
 }
 
@@ -99,7 +101,7 @@ half4 LitPassFragment(Varyings input) : SV_Target
 
     SurfaceData surfaceData;
     InitializeStandardLitSurfaceData(input.uv, surfaceData);
-
+    float3 mainLightDirection = GetMainLight().direction;
     InputData inputData;
     InitializeInputData(input, surfaceData.normalTS, inputData);
     #if defined _STOCKING_ON
@@ -107,9 +109,17 @@ half4 LitPassFragment(Varyings input) : SV_Target
     float3 fresnelColor = lerp(_fresnelFallOffColor,_fresnelCenterColor,fresnel);
     surfaceData.albedo *= fresnelColor;
     #endif
+    #if defined _SHADERENUM_HAIR
+    float  hairSpecularY =  input.uv1.y -inputData.viewDirectionWS.y *_AnisotropyShift;
+    float4 hairSpecular  =  SAMPLE_TEXTURE2D(_HairSpecularMap, sampler_HairSpecularMap, float2(input.uv1.x,hairSpecularY)) *_HairSpecularIntensity * lerp(_HairSpecularColorShadow,_HairSpecularColorLight,saturate(dot(inputData.normalWS,mainLightDirection))) ;
+    #endif
     half4 color = UniversalFragmentPBR(inputData, surfaceData);
-
-    
+    #if defined _SHADERENUM_HAIR
+    color      += hairSpecular;
+    #endif
+    #if defined _SHADERENUM_FACE
+    color = float4(surfaceData.albedo,1);
+    #endif
     color.a = OutputAlpha(color.a, _Surface);
 
     

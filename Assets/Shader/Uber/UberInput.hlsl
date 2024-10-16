@@ -29,12 +29,20 @@ half _Surface;
 half _EmissionScale;
 half _RampMin;
 half _RampMax;
-
+half _AnisotropyShift;
+half _HairSpecularIntensity;
+half4 _HairSpecularColorShadow;
+half4 _HairSpecularColorLight;
 float _fresnelScale;
 float _fresnelIndensity;
 float3 _fresnelFallOffColor;
 float3 _fresnelCenterColor;
 
+
+float3 _HeadRight;
+float3 _HeadFoward;
+float  _FaceShadowOffset;
+float _FaceShadowSoftness;
 
 half4 _OutlineAdj01;
 half4 _OutlineAdj02;
@@ -45,25 +53,16 @@ CBUFFER_END
 
 TEXTURE2D(_MetallicGlossMap);   SAMPLER(sampler_MetallicGlossMap);
 TEXTURE2D(_RampTex);            SAMPLER(sampler_RampTex);
+TEXTURE2D(_HairSpecularMap);    SAMPLER(sampler_HairSpecularMap);
+TEXTURE2D(_SDFMap);            SAMPLER(sampler_SDFMap);
 
 
-
-real3 UnpackNormalGBA(real4 packedNormal, real scale = 1.0)
-{
-    real3 normal;
-    normal.y = 1 - packedNormal.y;
-    normal.x = packedNormal.x * packedNormal.a;
-    normal.xy = normal.xy * 2.0 - 1.0;
-    normal.z = max(1.0e-16, sqrt(1.0 - saturate(dot(normal.xy, normal.xy))));
-    normal.xy *= scale;
-    return normal;
-}
 
 inline void InitializeStandardLitSurfaceData(float2 uv, out SurfaceData outSurfaceData)
 {
     half4 albedoAlpha = SampleAlbedoAlpha(uv, TEXTURE2D_ARGS(_BaseMap, sampler_BaseMap));
     outSurfaceData.alpha = albedoAlpha.a;
-   clip(albedoAlpha.a - 0.2);
+    clip(albedoAlpha.a - 0.2);
     half4 specGloss = SAMPLE_TEXTURE2D(_MetallicGlossMap, sampler_MetallicGlossMap, uv);
     outSurfaceData.albedo = albedoAlpha.rgb * _BaseColor.rgb;
     outSurfaceData.metallic = specGloss.g * _Metallic;

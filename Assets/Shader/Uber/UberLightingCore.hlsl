@@ -15,6 +15,25 @@ float ApplyOutlineDistanceFadeOut(float inputMulFix)
     //make outline "fadeout" if character is too small in camera's view
     return saturate(inputMulFix);
 }
+//平行光沿着Y轴旋转
+half DiffuseFaceLighting(half3 BaseColor,half3 L,half2 uv,half shadow)
+{
+    half3 diffuseColor = (half3)0;
+    half3 headRight = normalize(_HeadRight);
+    half3 headForward = normalize(_HeadFoward);
+    half3 headUp = cross(headForward,headRight);
+    half3 fixedDirectionWS = normalize(L - dot(L,headUp) * headUp);
+    // half2 sdfUV = half2(sign(dot(fixedDirectionWS,headRight)),1) * half2(-1,1) * uv;
+    half sign_sdf = sign(dot(fixedDirectionWS,headRight));
+    half2 sdfUV = sign_sdf > 0 ? uv : half2(1 - uv.x,uv.y);
+    // sdfUV = uv;
+    half sdfValue = SAMPLE_TEXTURE2D(_SDFMap,sampler_SDFMap,sdfUV).r;
+    sdfValue += _FaceShadowOffset;
+    half sdfThreshold = 1 - (dot(fixedDirectionWS,headForward) * 0.5 +0.5);
+    half sdf = smoothstep(sdfThreshold - _FaceShadowSoftness,sdfThreshold + _FaceShadowSoftness,sdfValue);
+    sdf = saturate(sdf * shadow);
+    return sdf;
+}
 float GetOutlineCameraFovAndDistanceFixMultiplier(float positionVS_Z)
 {
     float cameraMulFix;

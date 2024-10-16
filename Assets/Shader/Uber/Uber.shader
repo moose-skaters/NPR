@@ -2,9 +2,10 @@ Shader "Unlit/Uber"
 {
     Properties
     {
-        _Cull("__cull", Float) = 2.0
-        [Toggle]_Skin("Skin",Float) = 0.0
-        [Toggle]_Hair("Hair",Float) = 0.0
+        [Header(Base)]
+        [KeywordEnum(Base,Skin,Face,Hair,Eye)] _ShaderEnum("Shader类型", int) = 0
+        [Enum(UnityEngine.Rendering.CullMode)] _Cull ("Cull (Default back)", Float) = 2
+        
         [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
         [MainColor] _BaseColor("Color", Color) = (1,1,1,1)
         _Smoothness("Smoothness", Range(0.0, 1.0)) = 0.5
@@ -12,15 +13,21 @@ Shader "Unlit/Uber"
         _OcclusionStrength("OcclusionStrength",Range(0,1)) = 1
         _MetallicGlossMap("Metallic", 2D) = "black" {}
         _EmissionScale("_EmissionScale",Range(0,5)) = 0
-        _BumpScale("Scale", Range(0,4)) = 1.0
         _BumpMap("Normal Map", 2D) = "bump" {}
+        _BumpScale("Scale", Range(0,4)) = 1.0
+        [Header(Hair)]
+        _AnisotropyShift("AnisotropyShift",Range(0,0.1)) = 0.05
+        _HairSpecularMap("HairSpecularMap",2D) = "white" {}
+        _HairSpecularIntensity("HairSpecularIntensity",Range(0,2)) =   1
+        _HairSpecularColorShadow("_HairSpecularColorShadow",Color) =   (1,1,1,1)
+        _HairSpecularColorLight("_HairSpecularColorLight",  Color) =   (1,1,1,1)
+        
+        [Header(Stocking)]
         [Toggle]_Stocking("Stocking",Float) = 0.0
         _fresnelScale("fresnelScale", Range(0, 1)) = 1
 		_fresnelIndensity("fresnelIndensity", Range(0, 5)) = 5
         _fresnelCenterColor("fresnelCenterColor",Color) = (1,1,1,1)
         _fresnelFallOffColor("fresnelCenterColor",Color) = (1,1,1,1)
-        
-        
         
         [Header(Ramp)]
         _RampTex("RampTex", 2D)    = "white" {}
@@ -33,7 +40,6 @@ Shader "Unlit/Uber"
         _OutlineWidth ("描边粗细",float) = 0.56
         _OutlineScaleFactor ("描边缩放因子",float) = 0.00001
         _OutlineZOffset ("描边视角方向偏移",float) = 0
-        [KeywordEnum(Base,Face,Hair,Eye)] _ShaderEnum("Shader类型", int) = 0
     }
     SubShader
     {
@@ -78,7 +84,7 @@ Shader "Unlit/Uber"
             #pragma multi_compile_fragment _ _LIGHT_LAYERS
             #pragma multi_compile_fragment _ _LIGHT_COOKIES
             #pragma multi_compile _ _CLUSTERED_RENDERING
-            
+            #pragma shader_feature_local _SHADERENUM_BASE _SHADERENUM_SKIN _SHADERENUM_FACE _SHADERENUM_HAIR _SHADERENUM_EYE
             // -------------------------------------
             // Unity defined keywords
             #pragma multi_compile _ LIGHTMAP_SHADOW_MIXING

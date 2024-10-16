@@ -11,6 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 8618a2cfcae44624a8b5662fa4446950, type: 3}
   m_ValidKeywords:
   - _ALPHATEST_ON
+  - _SHADERENUM_BASE
   m_InvalidKeywords:
   - _RAMPMAP
   m_LightmapFlags: 4
@@ -45,6 +46,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DecalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HairSpecularMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -83,6 +88,7 @@ Material:
     - _EmissionScale: 0
     - _EmissiveIntensity: 0
     - _Hair: 0
+    - _HairSpecularIntensity: 1
     - _HolographicIntensity: 0
     - _HolographicWidth: 200
     - _LightIndex: 0
@@ -96,25 +102,33 @@ Material:
     - _PreMulAlpha: 0
     - _RampMax: 1
     - _RampMin: 0
+    - _ShaderEnum: 0
     - _Skin: 0
     - _Smoothness: 1
     - _StencilRefC: 200
     - _StencilRefCharStart: 200
+    - _Stocking: 0
     - _UseAlphaTest: 1
     - _UseBlendTex: 0
     - _UseDecal: 0
     - _UseGIFlatten: 0
     - _UseRampMap: 1
     - _UseSpecularUV2: 0
+    - _fresnelIndensity: 5
+    - _fresnelScale: 1
     m_Colors:
     - _AoeSelectColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _FinalTint: {r: 1, g: 1, b: 1, a: 1}
     - _HairDummyDirection: {r: 0, g: 0, b: 0, a: 0.15}
     - _HairDummyPosition: {r: 0, g: 1, b: 0, a: 0.15}
+    - _HairSpecularColorLight: {r: 1, g: 1, b: 1, a: 1}
+    - _HairSpecularColorShadow: {r: 1, g: 1, b: 1, a: 1}
     - _HolographicColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineAdj01: {r: 0.01, g: 2, b: 6, a: 0}
     - _OutlineAdj02: {r: 0.5, g: 0.74, b: 1.5, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 0.5019608}
     - _OutlineShadowColor: {r: 0, g: 0, b: 0, a: 1}
+    - _fresnelCenterColor: {r: 1, g: 1, b: 1, a: 1}
+    - _fresnelFallOffColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

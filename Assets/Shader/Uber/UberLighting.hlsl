@@ -42,7 +42,7 @@ half3 LightingPhysicallyBased(BRDFData brdfData, BRDFData brdfDataClearCoat,
     half clearCoatMask, bool specularHighlightsOff)
 {
     half NdotL = saturate(dot(normalWS, lightDirectionWS));
-    #if defined _SKIN_ON
+    #if defined _SHADERENUM_SKIN
     NdotL      = smoothstep(_RampMin,_RampMax,NdotL);
     #endif
     half4 RampDiffuse = SAMPLE_TEXTURE2D(_RampTex, sampler_RampTex, half2(NdotL,0.125));
@@ -246,7 +246,10 @@ half4 UniversalFragmentPBR(InputData inputData, SurfaceData surfaceData)
     // NOTE: can modify "surfaceData"...
     InitializeBRDFData(surfaceData, brdfData);
 
-   
+    #if defined _SHADERENUM_HAIR
+    brdfData.specular =0;
+
+    #endif
 
     // Clear-coat calculation...
     BRDFData brdfDataClearCoat = CreateClearCoatBRDFData(surfaceData, brdfData);
