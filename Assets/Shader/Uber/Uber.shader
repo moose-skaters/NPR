@@ -8,8 +8,8 @@ Shader "Unlit/Uber"
         
         [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
         [MainColor] _BaseColor("Color", Color) = (1,1,1,1)
-        _Smoothness("Smoothness", Range(0.0, 1.0)) = 0.5
-        _Metallic("Metallic", Range(0.0, 1.0)) = 0.0
+        _Smoothness("Smoothness", Range(0.0, 1.0)) = 1
+        _Metallic("Metallic", Range(0.0, 1.0)) = 1
         _OcclusionStrength("OcclusionStrength",Range(0,1)) = 1
         _MetallicGlossMap("Metallic", 2D) = "black" {}
         _EmissionScale("_EmissionScale",Range(0,5)) = 0
