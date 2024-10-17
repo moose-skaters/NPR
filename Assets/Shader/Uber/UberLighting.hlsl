@@ -45,8 +45,8 @@ half3 LightingPhysicallyBased(BRDFData brdfData, BRDFData brdfDataClearCoat,
     #if defined _SHADERENUM_SKIN
     NdotL      = smoothstep(_RampMin,_RampMax,NdotL);
     #endif
-    half4 RampDiffuse = SAMPLE_TEXTURE2D(_RampTex, sampler_RampTex, half2(NdotL,0.125));
-    half4 RampSpecular = SAMPLE_TEXTURE2D(_RampTex, sampler_RampTex, half2(NdotL,0.375));
+    half4 RampDiffuse = SAMPLE_TEXTURE2D(_RampMap, sampler_RampMap, half2(NdotL,0.125));
+    half4 RampSpecular = SAMPLE_TEXTURE2D(_RampMap, sampler_RampMap, half2(NdotL,0.375));
     half3 radianceDiffuse = lightColor * (lightAttenuation * RampDiffuse);
     half3 radianceSpecular = lightColor * (lightAttenuation * RampSpecular);
     half3 brdfDiffuse = brdfData.diffuse;

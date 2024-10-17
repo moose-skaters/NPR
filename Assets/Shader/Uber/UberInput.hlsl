@@ -51,8 +51,8 @@ half _OutlineScaleFactor;
 half _OutlineZOffset;
 CBUFFER_END
 
-TEXTURE2D(_MetallicGlossMap);   SAMPLER(sampler_MetallicGlossMap);
-TEXTURE2D(_RampTex);            SAMPLER(sampler_RampTex);
+TEXTURE2D(_RMOTex);   SAMPLER(sampler_RMOTex);
+TEXTURE2D(_RampMap);            SAMPLER(sampler_RampMap);
 TEXTURE2D(_HairSpecularMap);    SAMPLER(sampler_HairSpecularMap);
 TEXTURE2D(_SDFMap);            SAMPLER(sampler_SDFMap);
 
@@ -63,7 +63,7 @@ inline void InitializeStandardLitSurfaceData(float2 uv, out SurfaceData outSurfa
     half4 albedoAlpha = SampleAlbedoAlpha(uv, TEXTURE2D_ARGS(_BaseMap, sampler_BaseMap));
     outSurfaceData.alpha = albedoAlpha.a;
     clip(albedoAlpha.a - 0.2);
-    half4 specGloss = SAMPLE_TEXTURE2D(_MetallicGlossMap, sampler_MetallicGlossMap, uv);
+    half4 specGloss = SAMPLE_TEXTURE2D(_RMOTex, sampler_RMOTex, uv);
     outSurfaceData.albedo = albedoAlpha.rgb * _BaseColor.rgb;
     outSurfaceData.metallic = specGloss.g * _Metallic;
     outSurfaceData.specular = half3(0.0, 0.0, 0.0);

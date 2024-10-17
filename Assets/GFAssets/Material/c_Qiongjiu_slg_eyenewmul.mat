@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: c_Qiongjiu_slg_eyenewmul
+  m_Shader: {fileID: 4800000, guid: 8618a2cfcae44624a8b5662fa4446950, type: 3}
+  m_ValidKeywords:
+  - _SHADERENUM_EYE
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - GFCharDirOutline
+  - GFCharDirOutlineEx
+  - GFHairShadow
+  - GFCharFaceShadow
+  - GFCharHairTransE
+  - GFCharHairTrans
+  - GFCharHairTransBattle
+  - GFStencilOutline
+  - GFStencilBGOutline
+  - GFStencilUnderBG
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: c03514f8f6dfa5640a9655c1750d3eda, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HairSpecularMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: c03514f8f6dfa5640a9655c1750d3eda, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RMOTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RampMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AnisotropyShift: 0.05
+    - _BlendOp: 0
+    - _BumpScale: 1
+    - _CharSaturation: 0
+    - _ConcealLerp: 0
+    - _CorneaParallax: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailInt: 0.4
+    - _DetailNormalMapScale: 1
+    - _DetailOnOff: 0
+    - _DetailTiling: 2
+    - _DstBlend: 0
+    - _DstBlendMode: 0
+    - _EmissionScale: 0
+    - _EmissiveIntensity: 1
+    - _EnableHolographicScanline: 0
+    - _EnvironmentExposure: 1
+    - _EnvironmentRotate: 0
+    - _FresnelClamp: 1
+    - _FresnelPower: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _HairSpecularIntensity: 1
+    - _HolographicIntensity: 0
+    - _HolographicWidth: 200
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _OutlineScaleFactor: 0.0001
+    - _OutlineWidth: 0
+    - _OutlineZOffset: 0
+    - _Parallax: 0.02
+    - _Power: 1
+    - _QueueOffset: 1
+    - _RampMax: 1
+    - _RampMin: 0
+    - _SHADER_ID: 5
+    - _ShaderEnum: 4
+    - _ShadowStrength: 0.5
+    - _Shift: 1
+    - _Smoothness: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SpecularIntensity: 1
+    - _SpecularParallax: 0
+    - _SrcBlend: 1
+    - _SrcBlendMode: 2
+    - _Stocking: 0
+    - _Transparent: 1
+    - _UVSec: 0
+    - _ZTestMode: 7
+    - _ZWrite: 0
+    - _fresnelIndensity: 5
+    - _fresnelScale: 1
+    - _layer1BreakupAmnt: 0.5
+    - _layer1Metal: 0
+    - _layer1Tiling: 10
+    - _testversion: 0.85
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _CaustiColor: {r: 0.7647059, g: 0.6286041, b: 0.5019608, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _CorneaColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HairSpecularColorLight: {r: 1, g: 1, b: 1, a: 1}
+    - _HairSpecularColorShadow: {r: 1, g: 1, b: 1, a: 1}
+    - _HolographicColor: {r: 1, g: 1, b: 1, a: 1}
+    - _IrisColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineAdj01: {r: 0.01, g: 2, b: 6, a: 0}
+    - _OutlineAdj02: {r: 0.5, g: 0.74, b: 1.5, a: 0}
+    - _OutlineColor: {r: 0.10599997, g: 0.09019997, b: 0.07839998, a: 1}
+    - _RampColor1: {r: 0, g: 0, b: 0, a: 1}
+    - _RampColor2: {r: 0, g: 0, b: 0, a: 1}
+    - _RampColor3: {r: 0, g: 0, b: 0, a: 1}
+    - _ScleraColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadowColor: {r: 1, g: 1, b: 1, a: 1}
+    - _fresnelCenterColor: {r: 1, g: 1, b: 1, a: 1}
+    - _fresnelFallOffColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

@@ -120,6 +120,9 @@ half4 LitPassFragment(Varyings input) : SV_Target
     #if defined _SHADERENUM_FACE
     color = float4(surfaceData.albedo,1);
     #endif
+    #if defined _SHADERENUM_EYE
+    color = float4(surfaceData.albedo,1);
+    #endif
     color.a = OutputAlpha(color.a, _Surface);
 
     
