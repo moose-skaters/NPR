@@ -61,6 +61,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 551d8bc9e613e99438fe3ddc07ced945, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SDFMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _AdjustShadowBias: 0
@@ -87,6 +91,8 @@ Material:
     - _EmissionScale: 0
     - _EmissiveIntensity: 0
     - _EnableHolographicScanline: 0
+    - _FaceShadowOffset: 0
+    - _FaceShadowSoftness: 0
     - _FakeIntensity: 0.25
     - _FurShellThickness: 0.5
     - _HairSpecularIntensity: 1
@@ -102,7 +108,7 @@ Material:
     - _OutlineIntensity: 1
     - _OutlineOffset: 0
     - _OutlineScaleFactor: 0.0001
-    - _OutlineWidth: 0.5
+    - _OutlineWidth: 0.7
     - _OutlineZBias: 0
     - _OutlineZOffset: 0
     - _RampMax: 1
@@ -140,10 +146,12 @@ Material:
     - _ZTestMode: 4
     - _ZWrite: 1
     - _fresnelIndensity: 4.31
-    - _fresnelScale: 0.834
+    - _fresnelScale: 1
     m_Colors:
     - _AoeSelectColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FaceLightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FaceShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _FinalTint: {r: 1, g: 1, b: 1, a: 1}
     - _HairSpecularColorLight: {r: 1, g: 1, b: 1, a: 1}
     - _HairSpecularColorShadow: {r: 1, g: 1, b: 1, a: 1}

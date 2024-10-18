@@ -42,7 +42,9 @@ float3 _fresnelCenterColor;
 float3 _HeadRight;
 float3 _HeadFoward;
 float  _FaceShadowOffset;
-float _FaceShadowSoftness;
+float  _FaceShadowSoftness;
+float3 _FaceLightColor;
+float3 _FaceShadowColor;
 
 half4 _OutlineAdj01;
 half4 _OutlineAdj02;

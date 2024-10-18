@@ -61,6 +61,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 2a5eb04ff944a654ea41c37fc658226b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SDFMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _AnisotropicGXX: 0
@@ -83,6 +87,8 @@ Material:
     - _EmissionScale: 0
     - _EmissiveIntensity: 0
     - _EnableHolographicScanline: 0
+    - _FaceShadowOffset: 0
+    - _FaceShadowSoftness: 0
     - _HairSpecularIntensity: 1
     - _HolographicIntensity: 0
     - _HolographicWidth: 200
@@ -91,7 +97,7 @@ Material:
     - _OcclusionStrength: 1
     - _OutlineIntensity: 1
     - _OutlineScaleFactor: 0.0001
-    - _OutlineWidth: 0.5
+    - _OutlineWidth: 0.7
     - _OutlineZBias: 0
     - _OutlineZOffset: 0
     - _PreMulAlpha: 0
@@ -118,6 +124,8 @@ Material:
     m_Colors:
     - _AoeSelectColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FaceLightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FaceShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _FinalTint: {r: 1, g: 1, b: 1, a: 1}
     - _HairDummyDirection: {r: 0, g: 0, b: 0, a: 0.15}
     - _HairDummyPosition: {r: 0, g: 1, b: 0, a: 0.15}

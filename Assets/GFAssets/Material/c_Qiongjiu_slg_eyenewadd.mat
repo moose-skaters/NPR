@@ -33,7 +33,7 @@ Material:
     m_TexEnvs:
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: c03514f8f6dfa5640a9655c1750d3eda, type: 3}
-        m_Scale: {x: 1.55, y: 0.81}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
@@ -52,6 +52,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RampMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SDFMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -76,6 +80,8 @@ Material:
     - _EnableHolographicScanline: 0
     - _EnvironmentExposure: 1
     - _EnvironmentRotate: 0
+    - _FaceShadowOffset: 0
+    - _FaceShadowSoftness: 0
     - _FresnelClamp: 1
     - _FresnelPower: 0
     - _GlossMapScale: 1
@@ -88,7 +94,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _OutlineScaleFactor: 0.0001
-    - _OutlineWidth: 0
+    - _OutlineWidth: 0.7
     - _OutlineZOffset: 0
     - _Parallax: 0.02
     - _Power: 1
@@ -124,6 +130,8 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _CorneaColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FaceLightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FaceShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
     - _HairSpecularColorLight: {r: 1, g: 1, b: 1, a: 1}
     - _HairSpecularColorShadow: {r: 1, g: 1, b: 1, a: 1}

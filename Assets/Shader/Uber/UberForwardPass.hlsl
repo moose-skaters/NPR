@@ -105,8 +105,8 @@ half4 LitPassFragment(Varyings input) : SV_Target
     InputData inputData;
     InitializeInputData(input, surfaceData.normalTS, inputData);
     #if defined _STOCKING_ON
-    float fresnel = _fresnelScale*pow( dot(inputData.normalWS, inputData.viewDirectionWS), _fresnelIndensity);
-    float3 fresnelColor = lerp(_fresnelFallOffColor,_fresnelCenterColor,fresnel);
+    float fresnel = _fresnelScale*pow(saturate(dot(inputData.normalWS, inputData.viewDirectionWS)), _fresnelIndensity);
+    float3 fresnelColor = lerp(_fresnelFallOffColor,_fresnelCenterColor,saturate(fresnel));
     surfaceData.albedo *= fresnelColor;
     #endif
     #if defined _SHADERENUM_HAIR
@@ -118,7 +118,9 @@ half4 LitPassFragment(Varyings input) : SV_Target
     color      += hairSpecular;
     #endif
     #if defined _SHADERENUM_FACE
-    color = float4(surfaceData.albedo,1);
+    float faceSDF = DiffuseFaceLighting(mainLightDirection,input.uv1,1);
+    color.rgb = lerp(surfaceData.albedo*_FaceShadowColor,surfaceData.albedo*_FaceLightColor,faceSDF);
+    // color = float4(surfaceData.albedo,1);
     #endif
     #if defined _SHADERENUM_EYE
     color = float4(surfaceData.albedo,1);

@@ -83,7 +83,7 @@ Varyings LitPassOutlineVertex(Attributes input)
     output.uv = TRANSFORM_TEX(input.texcoord, _BaseMap);
     float3 normalVS = TransformWorldToViewDir(normalInput.normalWS,true);
     float3 viewDir = normalize(vertexInput.positionVS) * 0.01;
-    float outlineFactor = GenShinGetOutlineCameraFovAndDistanceFixMultiplier(vertexInput.positionVS.z,1,_OutlineScaleFactor,_OutlineWidth,_OutlineAdj01,_OutlineAdj02);
+    float outlineFactor = GenShinGetOutlineCameraFovAndDistanceFixMultiplier(vertexInput.positionVS.z,input.color.a,_OutlineScaleFactor,_OutlineWidth,_OutlineAdj01,_OutlineAdj02);
     float3 OffsetPositionVS = ApplyOutlineOffsetViewSpace(vertexInput.positionVS,viewDir,_OutlineZOffset,normalVS,outlineFactor);
     
     // already normalized from normal transform to WS.

@@ -38,6 +38,13 @@ Shader "Unlit/Uber"
         _RampMin("RampMin", Range(0,1)) = 0.0
         _RampMax("RampMax", Range(0,1)) = 1.0
         
+        [Header(Face)]
+        _SDFMap("SDFMap",  2D)    = "white" {}
+        _FaceShadowOffset("FaceShadowOffset",Range(0,1)) = 0
+        _FaceShadowSoftness("FaceShadowSoftness",Range(0,1)) = 0
+        _FaceShadowColor("FaceShadowColor",Color) = (0.5,0.5,0.5,1)
+        _FaceLightColor("_FaceLightColor",Color) = (1,1,1,1)
+        
         [Header(Outline)]
         _OutlineAdj01 ("描边距离范围x近处-y中间-z远距离",vector) = (0.01,2,6,0)
         _OutlineAdj02 ("描边范围缩放因子x近处-y中间-z远距离",vector) = (0.5, 0.74, 1.5, 0)
@@ -109,7 +116,8 @@ Shader "Unlit/Uber"
         
             #pragma vertex LitPassVertex
             #pragma fragment LitPassFragment
-
+            
+            #include "UberLightingCore.hlsl"
             #include "UberInput.hlsl"
             #include "UberForwardPass.hlsl"
             ENDHLSL

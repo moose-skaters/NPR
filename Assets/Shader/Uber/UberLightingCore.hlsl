@@ -16,7 +16,7 @@ float ApplyOutlineDistanceFadeOut(float inputMulFix)
     return saturate(inputMulFix);
 }
 //平行光沿着Y轴旋转
-half DiffuseFaceLighting(half3 BaseColor,half3 L,half2 uv,half shadow)
+half DiffuseFaceLighting(half3 L,half2 uv,half shadow)
 {
     half3 diffuseColor = (half3)0;
     half3 headRight = normalize(_HeadRight);
@@ -28,11 +28,12 @@ half DiffuseFaceLighting(half3 BaseColor,half3 L,half2 uv,half shadow)
     half2 sdfUV = sign_sdf > 0 ? uv : half2(1 - uv.x,uv.y);
     // sdfUV = uv;
     half sdfValue = SAMPLE_TEXTURE2D(_SDFMap,sampler_SDFMap,sdfUV).r;
+    half sdfMask = SAMPLE_TEXTURE2D(_SDFMap,sampler_SDFMap,sdfUV).a;
     sdfValue += _FaceShadowOffset;
     half sdfThreshold = 1 - (dot(fixedDirectionWS,headForward) * 0.5 +0.5);
     half sdf = smoothstep(sdfThreshold - _FaceShadowSoftness,sdfThreshold + _FaceShadowSoftness,sdfValue);
     sdf = saturate(sdf * shadow);
-    return sdf;
+    return sdf ;
 }
 float GetOutlineCameraFovAndDistanceFixMultiplier(float positionVS_Z)
 {

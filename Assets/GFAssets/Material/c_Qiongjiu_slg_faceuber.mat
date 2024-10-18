@@ -64,6 +64,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: cbbb356b06f5dbf43ae6ea163709c439, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SDFMap:
+        m_Texture: {fileID: 2800000, guid: a5ab1f1f4f6aebf4da850607bcc28255, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _AdjustShadowBias: 0
@@ -102,6 +106,8 @@ Material:
     - _EnableHolographicScanline: 0
     - _EnvironmentExposure: 1
     - _EnvironmentRotate: 0
+    - _FaceShadowOffset: 0
+    - _FaceShadowSoftness: 0
     - _FakeIntensity: 0.25
     - _FresnelClamp: 0.25
     - _FresnelPower: 0.1
@@ -129,7 +135,7 @@ Material:
     - _OutlineMinWidth: 1
     - _OutlineOffset: 0
     - _OutlineScaleFactor: 0.0001
-    - _OutlineWidth: 0.5
+    - _OutlineWidth: 0.7
     - _OutlineZBias: 0
     - _OutlineZOffset: 0
     - _Parallax: 0.02
@@ -189,7 +195,9 @@ Material:
     - _DarkColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FaceLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _FaceShadowBias: {r: 50, g: 50, b: 0, a: 0}
+    - _FaceShadowColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
     - _FinalTint: {r: 1, g: 1, b: 1, a: 1}
     - _FresnelColor: {r: 1, g: 0.9686275, b: 0.8000001, a: 1}
     - _FresnelNoseColor: {r: 1024, g: 1024, b: 1024, a: 1}
