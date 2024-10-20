@@ -23,6 +23,10 @@ struct Varyings
     half4  tangentWS                : TEXCOORD3;    // xyz: tangent, w: sign
     float4 color                    : TEXCOORD4;
     float2 uv1                      : TEXCOORD5;
+    #if    defined  _SHADERENUM_FACE
+    float4 positionSS               : TEXCOORD6;
+    float posNDCw                   : TEXCOORD7;
+    #endif
     DECLARE_LIGHTMAP_OR_SH(staticLightmapUV, vertexSH, 8);
     float4 positionCS               : SV_POSITION;
     UNITY_VERTEX_INPUT_INSTANCE_ID
@@ -88,6 +92,14 @@ Varyings LitPassVertex(Attributes input)
     output.positionCS = vertexInput.positionCS;
     output.color      = input.color;
     output.uv1        = input.texcoord1;
+
+    #if defined   _SHADERENUM_FACE
+    output.posNDCw    =  vertexInput.positionNDC.w;
+    output.positionSS =  ComputeScreenPos(vertexInput.positionCS);
+    
+    #endif
+
+    
     return output;
 }
 
@@ -118,8 +130,19 @@ half4 LitPassFragment(Varyings input) : SV_Target
     color      += hairSpecular;
     #endif
     #if defined _SHADERENUM_FACE
-    float faceSDF = DiffuseFaceLighting(mainLightDirection,input.uv1,1);
-    color.rgb = lerp(surfaceData.albedo*_FaceShadowColor,surfaceData.albedo*_FaceLightColor,faceSDF);
+    float depth = (input.positionCS.z / input.positionCS.w);
+    float linearEyeDepth = LinearEyeDepth(depth, _ZBufferParams);
+    float2 scrPos = input.positionSS.xy / input.positionSS.w;
+    float3 viewLightDir = normalize(TransformWorldToViewDir(mainLightDirection)) / input.posNDCw;
+    float2 samplingPoint = scrPos + _HairShadowDistace * viewLightDir.xy;
+    float hairDepth = SAMPLE_TEXTURE2D(_HairSoildColor, sampler_HairSoildColor, samplingPoint).g;
+    hairDepth = LinearEyeDepth(hairDepth, _ZBufferParams);
+    float depthContrast = linearEyeDepth  > hairDepth  + 0.01 ? 0: 1;
+    float hairShadow = depthContrast;
+    
+    float faceSDF = DiffuseFaceLighting(mainLightDirection,input.uv1,hairShadow);
+    
+    color.rgb = lerp(surfaceData.albedo*_FaceShadowColor,surfaceData.albedo*_FaceLightColor,faceSDF)  + SpecularFaceLighting(mainLightDirection,input.uv1)*_FaceSpecularColor;
     // color = float4(surfaceData.albedo,1);
     #endif
     #if defined _SHADERENUM_EYE

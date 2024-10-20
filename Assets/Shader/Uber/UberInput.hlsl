@@ -45,6 +45,10 @@ float  _FaceShadowOffset;
 float  _FaceShadowSoftness;
 float3 _FaceLightColor;
 float3 _FaceShadowColor;
+float  _NoseSpecMin;
+float  _NoseSpecMax;
+float3 _FaceSpecularColor;
+float  _HairShadowDistace;
 
 half4 _OutlineAdj01;
 half4 _OutlineAdj02;
@@ -53,11 +57,11 @@ half _OutlineScaleFactor;
 half _OutlineZOffset;
 CBUFFER_END
 
-TEXTURE2D(_RMOTex);   SAMPLER(sampler_RMOTex);
-TEXTURE2D(_RampMap);            SAMPLER(sampler_RampMap);
-TEXTURE2D(_HairSpecularMap);    SAMPLER(sampler_HairSpecularMap);
+TEXTURE2D(_RMOTex);            SAMPLER(sampler_RMOTex);
+TEXTURE2D(_RampMap);           SAMPLER(sampler_RampMap);
+TEXTURE2D(_HairSpecularMap);   SAMPLER(sampler_HairSpecularMap);
 TEXTURE2D(_SDFMap);            SAMPLER(sampler_SDFMap);
-
+TEXTURE2D(_HairSoildColor);    SAMPLER(sampler_HairSoildColor);
 
 
 inline void InitializeStandardLitSurfaceData(float2 uv, out SurfaceData outSurfaceData)

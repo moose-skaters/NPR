@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: foregrip_all_zenit_uber
+  m_Shader: {fileID: 4800000, guid: 8618a2cfcae44624a8b5662fa4446950, type: 3}
+  m_ValidKeywords:
+  - _SHADERENUM_BASE
+  m_InvalidKeywords:
+  - _RAMPMAP
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - GFCharDirOutline
+  - GFCharDirOutlineEx
+  - GFCharHairTransBattle
+  - GFCharHairTrans
+  - GFStencilOutline
+  - GFHairShadow
+  - GFCharFaceShadow
+  - GFCharHairTransE
+  - GFStencilBGOutline
+  - GFStencilUnderBG
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 1c25e8d8945e8d74f999ed89cc22ee40, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BlendTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: d43af81a8b41bb1419ae9c812376c238, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DecalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HairSpecularMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RMOTex:
+        m_Texture: {fileID: 2800000, guid: 4847822b07b939745a8b9db07ecc3ffb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RampMap:
+        m_Texture: {fileID: 2800000, guid: 68201c36f6ccae742a28d4e9539930f0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SDFMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AdjustShadowBias: 0
+    - _AnisotropicGXX: 0
+    - _AnisotropicSpecular: 0
+    - _Anisotropy: 1
+    - _AnisotropyShift: 0.05
+    - _AoeSelect: 0
+    - _BaseInsideLerp: 0
+    - _BlendOp: 0
+    - _BlendSmoothness: 0.1
+    - _BumpScale: 1
+    - _CampColorIndex: 0
+    - _CharSaturation: 0
+    - _ConcealLerp: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailMaskLevelHigh: 1
+    - _DetailMaskLevelLow: 0
+    - _DirOutlineWidthExt: 0
+    - _DissolveIntensity: 0
+    - _DoubleSided: 0
+    - _DstBlendMode: 0
+    - _EmissionScale: 0
+    - _EmissiveIntensity: 0
+    - _EnableHolographicScanline: 0
+    - _FaceShadowOffset: 0
+    - _FaceShadowSoftness: 0
+    - _FakeIntensity: 0.25
+    - _FurShellThickness: 0.5
+    - _HairSpecularIntensity: 1
+    - _HolographicIntensity: 0
+    - _HolographicWidth: 200
+    - _InsideColorBias: 0.5
+    - _InsideColorContrast: 1
+    - _InsideHeightBias: 0
+    - _InsideHeightContrast: 1
+    - _LightIndex: 0
+    - _Metallic: 1
+    - _NoseSpecMax: 1
+    - _NoseSpecMin: 0
+    - _OcclusionStrength: 1
+    - _OutlineIntensity: 1
+    - _OutlineOffset: 0
+    - _OutlineScaleFactor: 0.0001
+    - _OutlineWidth: 0.7
+    - _OutlineZBias: 0
+    - _OutlineZOffset: 0
+    - _RampMax: 1
+    - _RampMin: 0
+    - _ReflectionFresnelF0: 0
+    - _ReflectionIntensity: 0.35
+    - _SSSIntensity: 0.5
+    - _ShaderEnum: 0
+    - _ShadowBiasDistance: 0.1
+    - _Smoothness: 1
+    - _SrcBlendMode: 1
+    - _StencilComp: 0
+    - _StencilOp: 2
+    - _StencilRefC: 200
+    - _StencilRefCharStart: 200
+    - _StencilRefE: 204
+    - _StencilRefF: 200
+    - _StencilRefH: 203
+    - _Stocking: 0
+    - _StockingFalloffPower: 1
+    - _Tutorial: 0
+    - _UpAxis: 0
+    - _UseAlphaTest: 0
+    - _UseBlendTex: 0
+    - _UseDecal: 0
+    - _UseDetailMap: 0
+    - _UseFurShell: 0
+    - _UseGIFlatten: 0
+    - _UseRampMap: 1
+    - _UseSpecularUV2: 0
+    - _UseStockingFalloff: 0
+    - _UseSubsurfaceScattering: 0
+    - _UseVolumetricEffect: 0
+    - _WriteMask: 255
+    - _ZTestMode: 4
+    - _ZWrite: 1
+    - _fresnelIndensity: 5
+    - _fresnelScale: 1
+    m_Colors:
+    - _AoeSelectColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FaceLightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FaceShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _FaceSpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FinalTint: {r: 1, g: 1, b: 1, a: 1}
+    - _HairSpecularColorLight: {r: 1, g: 1, b: 1, a: 1}
+    - _HairSpecularColorShadow: {r: 1, g: 1, b: 1, a: 1}
+    - _HolographicColor: {r: 1, g: 1, b: 1, a: 1}
+    - _InsideBaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _OnHitColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineAdj01: {r: 0.01, g: 2, b: 6, a: 0}
+    - _OutlineAdj02: {r: 0.5, g: 0.74, b: 1.5, a: 0}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineShadowColor: {r: 0.10599997, g: 0.09019997, b: 0.07839998, a: 1}
+    - _StockingCenterColor: {r: 1, g: 1, b: 1, a: 1}
+    - _StockingFalloffColor: {r: 0.09999997, g: 0, b: 0, a: 1}
+    - _TutorialColor: {r: 1, g: 1, b: 1, a: 1}
+    - _fresnelCenterColor: {r: 1, g: 1, b: 1, a: 1}
+    - _fresnelFallOffColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

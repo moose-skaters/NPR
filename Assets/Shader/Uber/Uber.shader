@@ -25,6 +25,7 @@ Shader "Unlit/Uber"
         _HairSpecularIntensity("HairSpecularIntensity",Range(0,2)) =   1
         _HairSpecularColorShadow("_HairSpecularColorShadow",Color) =   (1,1,1,1)
         _HairSpecularColorLight("_HairSpecularColorLight",  Color) =   (1,1,1,1)
+        _HairShadowDistace("HairShadowDistace",Range(0,1))         =   0.1
         
         [Header(Stocking)]
         [Toggle]_Stocking("Stocking",Float) = 0.0
@@ -44,6 +45,9 @@ Shader "Unlit/Uber"
         _FaceShadowSoftness("FaceShadowSoftness",Range(0,1)) = 0
         _FaceShadowColor("FaceShadowColor",Color) = (0.5,0.5,0.5,1)
         _FaceLightColor("_FaceLightColor",Color) = (1,1,1,1)
+        _NoseSpecMin("_NoseSpecMin",Range(0,1))  = 0
+        _NoseSpecMax("_NoseSpecMax",Range(0,1))  = 1
+        _FaceSpecularColor("_FaceSpecularColor",Color) = (1,1,1,1)
         
         [Header(Outline)]
         _OutlineAdj01 ("描边距离范围x近处-y中间-z远距离",vector) = (0.01,2,6,0)
@@ -51,6 +55,21 @@ Shader "Unlit/Uber"
         _OutlineWidth ("描边粗细",float) = 0.56
         _OutlineScaleFactor ("描边缩放因子",float) = 0.0001
         _OutlineZOffset ("描边视角方向偏移",float) = 0
+        
+        [Header(Stencil)]
+        _StencilRef ("Stencil reference (Default 0)",Range(0,255)) = 0
+        [Enum(UnityEngine.Rendering.CompareFunction)] _StencilComp("Stencil comparison (Default disabled)",Int) = 0
+        [Enum(UnityEngine.Rendering.StencilOp)] _StencilPassOp("Stencil pass comparison (Default keep)",Int) = 0
+        [Enum(UnityEngine.Rendering.StencilOp)] _StencilFailOp("Stencil fail comparison (Default keep)",Int) = 0
+        [Enum(UnityEngine.Rendering.StencilOp)] _StencilZFailOp("Stencil z fail comparison (Default keep)",Int) = 0
+        
+        [Header(Draw Overlay)]
+        [Enum(UnityEngine.Rendering.BlendMode)] _ScrBlendModeOverlay("Overlay pass scr blend mode (Default One)",Float) = 1
+        [Enum(UnityEngine.Rendering.BlendMode)] _DstBlendModeOverlay("Overlay pass dst blend mode (Default Zero)", Float) = 0
+        [Enum(UnityEngine.Rendering.BlendOp)]   _BlendOpOverlay("Overlay pass blend operation (Default Add)", Float) = 0
+        _StencilRefOverlay ("Overlay pass stencil reference (Default 0)", Range(0,255)) = 0
+        [Enum(UnityEngine.Rendering.CompareFunction)] _StencilCompOverlay("Overlay pass stencil comparison (Default disabled)",Int) = 0
+        [Enum(UnityEngine.Rendering.StencilOp)] _StencilPassOpOverLay("Overlay Stencil pass comparison (Default keep)",Int) = 0
     }
     SubShader
     {
@@ -71,6 +90,13 @@ Shader "Unlit/Uber"
             BlendOp [_BlendOp]
             ZWrite [_ZWrite]
             ZTest [_ZTestMode]
+            Stencil{
+                Ref [_StencilRef]
+                Comp [_StencilComp]
+                Pass [_StencilPassOp]
+                Fail [_StencilFailOp]
+                ZFail [_StencilZFailOp]
+            }
             HLSLPROGRAM
             #pragma exclude_renderers gles gles3 glcore
             #pragma target 4.5
@@ -122,7 +148,74 @@ Shader "Unlit/Uber"
             #include "UberForwardPass.hlsl"
             ENDHLSL
         }
+        Pass
+        {
+            // Lightmode matches the ShaderPassName set in UniversalRenderPipeline.cs. SRPDefaultUnlit and passes with
+            // no LightMode tag are also rendered by Universal Render Pipeline
+            Name "HairBlend"
+            Tags{"LightMode" = "UniversalForwardOnly"}
+            Cull    [_Cull]
+            Blend   [_ScrBlendModeOverlay] [_DstBlendModeOverlay]
+            BlendOp [_BlendOpOverlay]
+            ZWrite  [_ZWrite]
+            ZTest   [_ZTestMode]
+            Stencil
+            {
+                Ref  [_StencilRefOverlay]
+                Comp [_StencilCompOverlay]
+                Pass [_StencilPassOpOverLay]
+            }
+            HLSLPROGRAM
+            #pragma exclude_renderers gles gles3 glcore
+            #pragma target 4.5
+            
+            // -------------------------------------
+            // Material Keywords
+         
+            #pragma shader_feature_local _RECEIVE_SHADOWS_OFF
+           
+          
+            #pragma shader_feature_local_fragment _SPECULARHIGHLIGHTS_OFF
+            #pragma shader_feature_local_fragment _ENVIRONMENTREFLECTIONS_OFF
+            #pragma shader_feature_local_fragment _SPECULAR_SETUP
+            #pragma shader_feature_local_fragment _ _SKIN_ON
+            #pragma shader_feature_local_fragment _ _HAIR_ON
+            #pragma shader_feature_local_fragment _ _STOCKING_ON
+            // -------------------------------------
+            // Universal Pipeline keywords
+            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN
+            #pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
+            #pragma multi_compile_fragment _ _ADDITIONAL_LIGHT_SHADOWS
+            #pragma multi_compile_fragment _ _REFLECTION_PROBE_BLENDING
+            #pragma multi_compile_fragment _ _REFLECTION_PROBE_BOX_PROJECTION
+            #pragma multi_compile_fragment _ _SHADOWS_SOFT
+            #pragma multi_compile_fragment _ _SCREEN_SPACE_OCCLUSION
+            #pragma multi_compile_fragment _ _LIGHT_LAYERS
+            #pragma multi_compile_fragment _ _LIGHT_COOKIES
+            #pragma multi_compile _ _CLUSTERED_RENDERING
+            #pragma shader_feature_local _SHADERENUM_BASE _SHADERENUM_SKIN _SHADERENUM_FACE _SHADERENUM_HAIR _SHADERENUM_EYE
+            // -------------------------------------
+            // Unity defined keywords
+            #pragma multi_compile _ LIGHTMAP_SHADOW_MIXING
+            #pragma multi_compile _ SHADOWS_SHADOWMASK
+            #define  _NORMALMAP 1
+            #pragma multi_compile_fog
+            
+
+            //--------------------------------------
+            // GPU Instancing
+            #pragma multi_compile_instancing
+            #pragma instancing_options renderinglayer
+            #pragma multi_compile _ DOTS_INSTANCING_ON
         
+            #pragma vertex   LitPassVertex
+            #pragma fragment LitPassFragment
+            
+            #include "UberLightingCore.hlsl"
+            #include "UberInput.hlsl"
+            #include "UberForwardPass.hlsl"
+            ENDHLSL
+        }
         Pass
         {
             // Lightmode matches the ShaderPassName set in UniversalRenderPipeline.cs. SRPDefaultUnlit and passes with
@@ -130,6 +223,13 @@ Shader "Unlit/Uber"
             Name "Outline"
             Tags{"LightMode" = "SRPDefaultUnlit"}
             Cull Front
+            Stencil{
+                Ref [_StencilRef]
+                Comp [_StencilComp]
+                Pass [_StencilPassOp]
+                Fail [_StencilFailOp]
+                ZFail [_StencilZFailOp]
+            }
             HLSLPROGRAM
             #pragma exclude_renderers gles gles3 glcore
             #pragma target 4.5
@@ -164,7 +264,13 @@ Shader "Unlit/Uber"
             ZWrite On
             ZTest LEqual
             ColorMask 0
-           
+            Stencil{
+                Ref [_StencilRef]
+                Comp [_StencilComp]
+                Pass [_StencilPassOp]
+                Fail [_StencilFailOp]
+                ZFail [_StencilZFailOp]
+            }
 
             HLSLPROGRAM
             #pragma exclude_renderers gles gles3 glcore
@@ -268,7 +374,13 @@ Shader "Unlit/Uber"
 
             ZWrite On
             ColorMask 0
-          
+            Stencil{
+                Ref [_StencilRef]
+                Comp [_StencilComp]
+                Pass [_StencilPassOp]
+                Fail [_StencilFailOp]
+                ZFail [_StencilZFailOp]
+            }
 
             HLSLPROGRAM
             #pragma exclude_renderers gles gles3 glcore
@@ -297,7 +409,13 @@ Shader "Unlit/Uber"
         {
             Name "DepthNormals"
             Tags{"LightMode" = "DepthNormals"}
-
+            Stencil{
+                Ref [_StencilRef]
+                Comp [_StencilComp]
+                Pass [_StencilPassOp]
+                Fail [_StencilFailOp]
+                ZFail [_StencilZFailOp]
+            }
             ZWrite On
             ColorMask 0
 

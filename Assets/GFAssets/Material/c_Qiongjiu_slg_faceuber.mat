@@ -78,6 +78,7 @@ Material:
     - _AoeSelect: 0
     - _BaseInsideLerp: 0
     - _BlendOp: 0
+    - _BlendOpOverlay: 0
     - _BlendSmoothness: 0.1
     - _BumpScale: 1
     - _CampColorIndex: 0
@@ -99,6 +100,7 @@ Material:
     - _DoubleSided: 0
     - _DstBlend: 0
     - _DstBlendMode: 0
+    - _DstBlendModeOverlay: 0
     - _EmissionScale: 0
     - _EmissionSize: 0
     - _EmissiveIntensity: 0
@@ -115,6 +117,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _HairShadowDistace: 0.01
     - _HairSpecularIntensity: 1
     - _HightLight: 0
     - _HolographicIntensity: 0
@@ -126,9 +129,11 @@ Material:
     - _IsHair: 0
     - _IsSkin: 0
     - _LightIndex: 0
-    - _Metallic: 0.55
+    - _Metallic: 1
     - _Mode: 0
-    - _OcclusionStrength: 1
+    - _NoseSpecMax: 1
+    - _NoseSpecMin: 0
+    - _OcclusionStrength: 0
     - _OlFresnelIndex: 3
     - _OutlineIntensity: 1
     - _OutlineMaxWidth: 3.5
@@ -148,21 +153,29 @@ Material:
     - _RoughnessScale: 0.5
     - _SHADER_ID: 2
     - _SSSIntensity: 0.5
+    - _ScrBlendModeOverlay: 1
     - _ShaderEnum: 2
     - _ShadowBiasDistance: 0
-    - _Smoothness: 0.7
+    - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendMode: 1
     - _StencilComp: 0
+    - _StencilCompOverlay: 0
+    - _StencilFailOp: 0
     - _StencilOp: 2
+    - _StencilPassOp: 0
+    - _StencilPassOpOverLay: 0
+    - _StencilRef: 0
     - _StencilRefC: 200
     - _StencilRefCharStart: 200
     - _StencilRefE: 204
     - _StencilRefF: 200
     - _StencilRefH: 203
+    - _StencilRefOverlay: 0
     - _StencilRefShadow: 201
+    - _StencilZFailOp: 0
     - _Stocking: 0
     - _StockingFalloffPower: 1
     - _Transparent: 1
@@ -197,7 +210,8 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FaceLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _FaceShadowBias: {r: 50, g: 50, b: 0, a: 0}
-    - _FaceShadowColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
+    - _FaceShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _FaceSpecularColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
     - _FinalTint: {r: 1, g: 1, b: 1, a: 1}
     - _FresnelColor: {r: 1, g: 0.9686275, b: 0.8000001, a: 1}
     - _FresnelNoseColor: {r: 1024, g: 1024, b: 1024, a: 1}

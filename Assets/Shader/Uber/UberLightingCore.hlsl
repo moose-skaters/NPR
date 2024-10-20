@@ -28,12 +28,35 @@ half DiffuseFaceLighting(half3 L,half2 uv,half shadow)
     half2 sdfUV = sign_sdf > 0 ? uv : half2(1 - uv.x,uv.y);
     // sdfUV = uv;
     half sdfValue = SAMPLE_TEXTURE2D(_SDFMap,sampler_SDFMap,sdfUV).r;
-    half sdfMask = SAMPLE_TEXTURE2D(_SDFMap,sampler_SDFMap,sdfUV).a;
+    
     sdfValue += _FaceShadowOffset;
     half sdfThreshold = 1 - (dot(fixedDirectionWS,headForward) * 0.5 +0.5);
     half sdf = smoothstep(sdfThreshold - _FaceShadowSoftness,sdfThreshold + _FaceShadowSoftness,sdfValue);
     sdf = saturate(sdf * shadow);
     return sdf ;
+}
+
+half SpecularFaceLighting(half3 L,half2 uv)
+{
+    half3 diffuseColor = (half3)0;
+    half3 headRight = normalize(_HeadRight);
+    half3 headForward = normalize(_HeadFoward);
+    half3 headUp = cross(headForward,headRight);
+    half3 fixedDirectionWS = normalize(L - dot(L,headUp) * headUp);
+    // half2 sdfUV = half2(sign(dot(fixedDirectionWS,headRight)),1) * half2(-1,1) * uv;
+    half sign_sdf = sign(dot(fixedDirectionWS,headRight));
+    half2 sdfUV = sign_sdf > 0 ? uv : half2(1 - uv.x,uv.y);
+    // sdfUV = uv;
+    half sdfValue1 = SAMPLE_TEXTURE2D(_SDFMap,sampler_SDFMap,sdfUV).g;
+    half sdfValue2 = SAMPLE_TEXTURE2D(_SDFMap,sampler_SDFMap,sdfUV).b;
+    float faceLightDot = dot(fixedDirectionWS,headForward);
+    
+    float2 faceLightMap = SAMPLE_TEXTURE2D(_SDFMap, sampler_SDFMap, sdfUV);
+    float  noseSpecArea1 = step(faceLightDot, faceLightMap.r);
+    float  noseSpecArea2 = step(1 - faceLightDot, faceLightMap.g);
+    float  noseSpecArea = noseSpecArea1 * noseSpecArea2;
+    noseSpecArea *= smoothstep(_NoseSpecMin, _NoseSpecMax, 1 - faceLightDot);
+    return noseSpecArea ;
 }
 float GetOutlineCameraFovAndDistanceFixMultiplier(float positionVS_Z)
 {

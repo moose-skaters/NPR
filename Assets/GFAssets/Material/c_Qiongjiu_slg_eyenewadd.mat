@@ -92,6 +92,8 @@ Material:
     - _HolographicWidth: 200
     - _Metallic: 0
     - _Mode: 0
+    - _NoseSpecMax: 1
+    - _NoseSpecMin: 0
     - _OcclusionStrength: 1
     - _OutlineScaleFactor: 0.0001
     - _OutlineWidth: 0.7
@@ -116,7 +118,7 @@ Material:
     - _Stocking: 0
     - _Transparent: 1
     - _UVSec: 0
-    - _ZTestMode: 5
+    - _ZTestMode: 4
     - _ZWrite: 0
     - _fresnelIndensity: 5
     - _fresnelScale: 1
@@ -132,6 +134,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FaceLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _FaceShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _FaceSpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
     - _HairSpecularColorLight: {r: 1, g: 1, b: 1, a: 1}
     - _HairSpecularColorShadow: {r: 1, g: 1, b: 1, a: 1}

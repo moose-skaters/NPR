@@ -63,6 +63,7 @@ Material:
     m_Floats:
     - _AnisotropyShift: 0.05
     - _BlendOp: 0
+    - _BlendOpOverlay: 0
     - _BumpScale: 1
     - _CharSaturation: 0
     - _ConcealLerp: 0
@@ -75,6 +76,7 @@ Material:
     - _DetailTiling: 2
     - _DstBlend: 0
     - _DstBlendMode: 0
+    - _DstBlendModeOverlay: 0
     - _EmissionScale: 0
     - _EmissiveIntensity: 1
     - _EnableHolographicScanline: 0
@@ -92,6 +94,8 @@ Material:
     - _HolographicWidth: 200
     - _Metallic: 0
     - _Mode: 0
+    - _NoseSpecMax: 1
+    - _NoseSpecMin: 0
     - _OcclusionStrength: 1
     - _OutlineScaleFactor: 0.0001
     - _OutlineWidth: 0.7
@@ -102,6 +106,7 @@ Material:
     - _RampMax: 1
     - _RampMin: 0
     - _SHADER_ID: 5
+    - _ScrBlendModeOverlay: 2
     - _ShaderEnum: 4
     - _ShadowStrength: 0.5
     - _Shift: 1
@@ -112,10 +117,18 @@ Material:
     - _SpecularParallax: 0
     - _SrcBlend: 1
     - _SrcBlendMode: 2
+    - _StencilComp: 0
+    - _StencilCompOverlay: 0
+    - _StencilFailOp: 0
+    - _StencilPassOp: 0
+    - _StencilPassOpOverLay: 0
+    - _StencilRef: 0
+    - _StencilRefOverlay: 0
+    - _StencilZFailOp: 0
     - _Stocking: 0
     - _Transparent: 1
     - _UVSec: 0
-    - _ZTestMode: 7
+    - _ZTestMode: 4
     - _ZWrite: 0
     - _fresnelIndensity: 5
     - _fresnelScale: 1
@@ -131,6 +144,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FaceLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _FaceShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _FaceSpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
     - _HairSpecularColorLight: {r: 1, g: 1, b: 1, a: 1}
     - _HairSpecularColorShadow: {r: 1, g: 1, b: 1, a: 1}

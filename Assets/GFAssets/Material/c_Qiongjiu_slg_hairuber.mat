@@ -105,6 +105,8 @@ Material:
     - _InsideHeightContrast: 1
     - _LightIndex: 0
     - _Metallic: 1
+    - _NoseSpecMax: 1
+    - _NoseSpecMin: 0
     - _OcclusionStrength: 1
     - _OutlineIntensity: 1
     - _OutlineOffset: 0
@@ -153,6 +155,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _FaceLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _FaceShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _FaceSpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _FinalTint: {r: 1, g: 1, b: 1, a: 1}
     - _HairSpecularColorLight: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
     - _HairSpecularColorShadow: {r: 0, g: 0, b: 0, a: 1}
