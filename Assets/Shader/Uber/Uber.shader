@@ -16,15 +16,16 @@ Shader "Unlit/Uber"
         _Metallic("Metallic", Range(0.0, 1.0)) = 1
         _OcclusionStrength("OcclusionStrength",Range(0,1)) = 1
         _RMOTex("Metallic", 2D) = "black" {}
-        _EmissionScale("_EmissionScale",Range(0,5)) = 0
+        _EmissionScale("EmissionScale",Range(0,5)) = 0
         _BumpMap("Normal Map", 2D) = "bump" {}
         _BumpScale("Scale", Range(0,4)) = 1.0
         [Header(Hair)]
+        _Alpha("Alpha",Range(0,1))     = 1.0
         _AnisotropyShift("AnisotropyShift",Range(0,0.1)) = 0.05
         _HairSpecularMap("HairSpecularMap",2D) = "white" {}
         _HairSpecularIntensity("HairSpecularIntensity",Range(0,2)) =   1
-        _HairSpecularColorShadow("_HairSpecularColorShadow",Color) =   (1,1,1,1)
-        _HairSpecularColorLight("_HairSpecularColorLight",  Color) =   (1,1,1,1)
+        _HairSpecularColorShadow("HairSpecularColorShadow",Color) =   (1,1,1,1)
+        _HairSpecularColorLight("HairSpecularColorLight",  Color) =   (1,1,1,1)
         _HairShadowDistace("HairShadowDistace",Range(0,1))         =   0.1
         
         [Header(Stocking)]
@@ -44,10 +45,11 @@ Shader "Unlit/Uber"
         _FaceShadowOffset("FaceShadowOffset",Range(0,1)) = 0
         _FaceShadowSoftness("FaceShadowSoftness",Range(0,1)) = 0
         _FaceShadowColor("FaceShadowColor",Color) = (0.5,0.5,0.5,1)
-        _FaceLightColor("_FaceLightColor",Color) = (1,1,1,1)
-        _NoseSpecMin("_NoseSpecMin",Range(0,1))  = 0
-        _NoseSpecMax("_NoseSpecMax",Range(0,1))  = 1
-        _FaceSpecularColor("_FaceSpecularColor",Color) = (1,1,1,1)
+        _FaceLightColor("FaceLightColor",Color) = (1,1,1,1)
+        _NoseSpecMin("NoseSpecMin",Range(0,1))  = 0
+        _NoseSpecMax("NoseSpecMax",Range(0,1))  = 1
+        _NoseSpecularOffset("NoseSpecularOffset",Range(0,1)) = 0
+        _FaceSpecularColor("FaceSpecularColor",Color) = (1,1,1,1)
         
         [Header(Outline)]
         _OutlineAdj01 ("描边距离范围x近处-y中间-z远距离",vector) = (0.01,2,6,0)
@@ -216,6 +218,7 @@ Shader "Unlit/Uber"
             #include "UberForwardPass.hlsl"
             ENDHLSL
         }
+
         Pass
         {
             // Lightmode matches the ShaderPassName set in UniversalRenderPipeline.cs. SRPDefaultUnlit and passes with

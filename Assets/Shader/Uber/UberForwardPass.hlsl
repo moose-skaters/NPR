@@ -142,13 +142,13 @@ half4 LitPassFragment(Varyings input) : SV_Target
     
     float faceSDF = DiffuseFaceLighting(mainLightDirection,input.uv1,hairShadow);
     
-    color.rgb = lerp(surfaceData.albedo*_FaceShadowColor,surfaceData.albedo*_FaceLightColor,faceSDF)  + SpecularFaceLighting(mainLightDirection,input.uv1)*_FaceSpecularColor;
+    color.rgb = lerp(surfaceData.albedo*_FaceShadowColor,surfaceData.albedo*_FaceLightColor,faceSDF)  + SpecularFaceLighting(mainLightDirection,input.uv1);
     // color = float4(surfaceData.albedo,1);
     #endif
     #if defined _SHADERENUM_EYE
     color = float4(surfaceData.albedo,1);
     #endif
-    color.a = OutputAlpha(color.a, _Surface);
+    color.a = _Alpha;
 
     
     return color;

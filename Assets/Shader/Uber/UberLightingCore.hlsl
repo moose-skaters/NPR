@@ -36,7 +36,7 @@ half DiffuseFaceLighting(half3 L,half2 uv,half shadow)
     return sdf ;
 }
 
-half SpecularFaceLighting(half3 L,half2 uv)
+half3 SpecularFaceLighting(half3 L,half2 uv)
 {
     half3 diffuseColor = (half3)0;
     half3 headRight = normalize(_HeadRight);
@@ -45,18 +45,22 @@ half SpecularFaceLighting(half3 L,half2 uv)
     half3 fixedDirectionWS = normalize(L - dot(L,headUp) * headUp);
     // half2 sdfUV = half2(sign(dot(fixedDirectionWS,headRight)),1) * half2(-1,1) * uv;
     half sign_sdf = sign(dot(fixedDirectionWS,headRight));
-    half2 sdfUV = sign_sdf > 0 ? uv : half2(1 - uv.x,uv.y);
-    // sdfUV = uv;
-    half sdfValue1 = SAMPLE_TEXTURE2D(_SDFMap,sampler_SDFMap,sdfUV).g;
-    half sdfValue2 = SAMPLE_TEXTURE2D(_SDFMap,sampler_SDFMap,sdfUV).b;
-    float faceLightDot = dot(fixedDirectionWS,headForward);
+    half faceLightDotX = dot(fixedDirectionWS.xz, headRight.xz);
+    half faceLightDotY = saturate(dot(-fixedDirectionWS.xz, headRight.xz) * 0.5 + _NoseSpecularOffset);
+    float2 faceLightMapUV = uv;
+    faceLightMapUV.x =  uv.x;
+    faceLightMapUV.x = faceLightDotX < 0 ? 1 - faceLightMapUV.x : faceLightMapUV.x;
+    float faceSpecStep = clamp(faceLightDotY, 0.001, 0.999);
+    half3 sdfValue = SAMPLE_TEXTURE2D(_SDFMap,sampler_SDFMap,faceLightMapUV).rgb;
+
+    float noseSpecArea1 = step(faceSpecStep, sdfValue.g);
+    float noseSpecArea2 = step(1 - faceSpecStep, sdfValue.b);
+    float noseSpecArea = noseSpecArea1 * noseSpecArea2 * smoothstep(_NoseSpecMin, _NoseSpecMax, 1 - faceLightDotY);
+    float3 noseSpecColor = _FaceSpecularColor.rgb  * noseSpecArea;
+
     
-    float2 faceLightMap = SAMPLE_TEXTURE2D(_SDFMap, sampler_SDFMap, sdfUV);
-    float  noseSpecArea1 = step(faceLightDot, faceLightMap.r);
-    float  noseSpecArea2 = step(1 - faceLightDot, faceLightMap.g);
-    float  noseSpecArea = noseSpecArea1 * noseSpecArea2;
-    noseSpecArea *= smoothstep(_NoseSpecMin, _NoseSpecMax, 1 - faceLightDot);
-    return noseSpecArea ;
+ 
+    return noseSpecColor ;
 }
 float GetOutlineCameraFovAndDistanceFixMultiplier(float positionVS_Z)
 {

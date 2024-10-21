@@ -89,6 +89,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _HairShadowDistace: 0.1
     - _HairSpecularIntensity: 1
     - _HolographicIntensity: 0
     - _HolographicWidth: 200
@@ -98,7 +99,7 @@ Material:
     - _NoseSpecMin: 0
     - _OcclusionStrength: 1
     - _OutlineScaleFactor: 0.0001
-    - _OutlineWidth: 0.7
+    - _OutlineWidth: 0
     - _OutlineZOffset: 0
     - _Parallax: 0.02
     - _Power: 1

@@ -67,6 +67,7 @@ Material:
     m_Floats:
     - _AnisotropyShift: 0.05
     - _BlendOp: 0
+    - _BlendOpOverlay: 0
     - _BumpScale: 1
     - _CharSaturation: 0
     - _ConcealLerp: 0
@@ -80,6 +81,7 @@ Material:
     - _DissolveLerp: 1
     - _DstBlend: 0
     - _DstBlendMode: 0
+    - _DstBlendModeOverlay: 0
     - _EmissionScale: 0
     - _EmissiveIntensity: 0.3
     - _EnableHolographicScanline: 0
@@ -92,6 +94,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _HairShadowDistace: 0.1
     - _HairSpecularIntensity: 1
     - _HolographicIntensity: 0
     - _HolographicWidth: 200
@@ -103,7 +106,7 @@ Material:
     - _OcclusionStrength: 1
     - _OlFresnelIndex: 0
     - _OutlineScaleFactor: 0.0001
-    - _OutlineWidth: 0.7
+    - _OutlineWidth: 0
     - _OutlineZOffset: 0
     - _Parallax: 0.02
     - _Power: 1
@@ -111,6 +114,7 @@ Material:
     - _RampMax: 1
     - _RampMin: 0
     - _SHADER_ID: 5
+    - _ScrBlendModeOverlay: 1
     - _ShaderEnum: 4
     - _ShadowBiasDistance: 0.1
     - _ShadowIntensity: 0.335
@@ -122,7 +126,15 @@ Material:
     - _SpecularParallax: 0
     - _SrcBlend: 1
     - _SrcBlendMode: 1
+    - _StencilComp: 0
+    - _StencilCompOverlay: 0
+    - _StencilFailOp: 0
+    - _StencilPassOp: 0
+    - _StencilPassOpOverLay: 0
+    - _StencilRef: 0
     - _StencilRefE: 204
+    - _StencilRefOverlay: 0
+    - _StencilZFailOp: 0
     - _Stocking: 0
     - _Transparent: 1
     - _UVSec: 0

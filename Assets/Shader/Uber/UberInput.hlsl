@@ -29,6 +29,8 @@ half _Surface;
 half _EmissionScale;
 half _RampMin;
 half _RampMax;
+
+half _Alpha;
 half _AnisotropyShift;
 half _HairSpecularIntensity;
 half4 _HairSpecularColorShadow;
@@ -47,6 +49,7 @@ float3 _FaceLightColor;
 float3 _FaceShadowColor;
 float  _NoseSpecMin;
 float  _NoseSpecMax;
+float  _NoseSpecularOffset;
 float3 _FaceSpecularColor;
 float  _HairShadowDistace;
 
