@@ -95,10 +95,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Alpha: 1
     - _AlphaClip: 0
     - _AnisotropyShift: 0.05
     - _Blend: 0
     - _BlendOp: 0
+    - _BlendOpOverlay: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -108,6 +110,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendMode: 0
+    - _DstBlendModeOverlay: 1
     - _EmissionScale: 0
     - _EnvironmentReflections: 1
     - _FaceShadowOffset: 0
@@ -115,6 +118,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _HairShadowDistace: 0.1
     - _HairSpecularIntensity: 1
     - _Metallic: 1
     - _NoseSpecMax: 1
@@ -128,12 +132,21 @@ Material:
     - _RampMax: 1
     - _RampMin: 0
     - _ReceiveShadows: 1
+    - _ScrBlendModeOverlay: 0
     - _ShaderEnum: 0
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendMode: 1
+    - _StencilComp: 0
+    - _StencilCompOverlay: 0
+    - _StencilFailOp: 0
+    - _StencilPassOp: 0
+    - _StencilPassOpOverLay: 0
+    - _StencilRef: 0
+    - _StencilRefOverlay: 0
+    - _StencilZFailOp: 0
     - _Stocking: 0
     - _Surface: 0
     - _WorkflowMode: 1

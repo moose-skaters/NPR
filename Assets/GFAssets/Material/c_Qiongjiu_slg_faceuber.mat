@@ -22,7 +22,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 1997
   stringTagMap: {}
   disabledShaderPasses:
   - GFCharDirOutlineEx
@@ -71,6 +71,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AdjustShadowBias: 0
+    - _Alpha: 1
     - _AnisotropicGXX: 0
     - _AnisotropicSpecular: 1
     - _Anisotropy: 1
@@ -100,7 +101,7 @@ Material:
     - _DoubleSided: 0
     - _DstBlend: 0
     - _DstBlendMode: 0
-    - _DstBlendModeOverlay: 0
+    - _DstBlendModeOverlay: 1
     - _EmissionScale: 0
     - _EmissionSize: 0
     - _EmissiveIntensity: 0
@@ -131,8 +132,9 @@ Material:
     - _LightIndex: 0
     - _Metallic: 1
     - _Mode: 0
-    - _NoseSpecMax: 1
+    - _NoseSpecMax: 0.994
     - _NoseSpecMin: 0
+    - _NoseSpecularOffset: 0.039
     - _OcclusionStrength: 0
     - _OlFresnelIndex: 3
     - _OutlineIntensity: 1
@@ -153,7 +155,7 @@ Material:
     - _RoughnessScale: 0.5
     - _SHADER_ID: 2
     - _SSSIntensity: 0.5
-    - _ScrBlendModeOverlay: 1
+    - _ScrBlendModeOverlay: 0
     - _ShaderEnum: 2
     - _ShadowBiasDistance: 0
     - _Smoothness: 1
@@ -211,7 +213,7 @@ Material:
     - _FaceLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _FaceShadowBias: {r: 50, g: 50, b: 0, a: 0}
     - _FaceShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _FaceSpecularColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
+    - _FaceSpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _FinalTint: {r: 1, g: 1, b: 1, a: 1}
     - _FresnelColor: {r: 1, g: 0.9686275, b: 0.8000001, a: 1}
     - _FresnelNoseColor: {r: 1024, g: 1024, b: 1024, a: 1}

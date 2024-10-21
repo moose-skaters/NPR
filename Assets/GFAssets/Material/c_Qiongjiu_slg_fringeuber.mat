@@ -65,10 +65,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _AdjustShadowBias: 1
+    - _Alpha: 0.5
     - _AnisotropicGXX: 0
     - _AnisotropicSpecular: 1
     - _Anisotropy: 1
-    - _AnisotropyShift: 0.05
+    - _AnisotropyShift: 0.0484
     - _AoeSelect: 0
     - _BaseInsideLerp: 0
     - _BlendOp: 0
@@ -86,7 +87,7 @@ Material:
     - _DissolveIntensity: 0
     - _DoubleSided: 0
     - _DstBlendMode: 0
-    - _DstBlendModeOverlay: 0
+    - _DstBlendModeOverlay: 10
     - _EmissionScale: 0
     - _EmissiveIntensity: 0
     - _EnableHolographicScanline: 0
@@ -94,6 +95,7 @@ Material:
     - _FaceShadowSoftness: 0
     - _FakeIntensity: 0.25
     - _FurShellThickness: 0.5
+    - _HairShadowDistace: 0.1
     - _HairSpecularIntensity: 1
     - _HolographicIntensity: 0
     - _HolographicWidth: 200
@@ -105,6 +107,7 @@ Material:
     - _Metallic: 1
     - _NoseSpecMax: 1
     - _NoseSpecMin: 0
+    - _NoseSpecularOffset: 0
     - _OcclusionStrength: 1
     - _OutlineIntensity: 1
     - _OutlineOffset: 0
@@ -117,7 +120,7 @@ Material:
     - _ReflectionFresnelF0: 0
     - _ReflectionIntensity: 0.35
     - _SSSIntensity: 0.5
-    - _ScrBlendModeOverlay: 1
+    - _ScrBlendModeOverlay: 5
     - _ShaderEnum: 3
     - _ShadowBiasDistance: 0
     - _Smoothness: 1
@@ -134,7 +137,7 @@ Material:
     - _StencilRefE: 204
     - _StencilRefF: 200
     - _StencilRefH: 203
-    - _StencilRefOverlay: 0
+    - _StencilRefOverlay: 8
     - _StencilZFailOp: 0
     - _Stocking: 0
     - _StockingFalloffPower: 1

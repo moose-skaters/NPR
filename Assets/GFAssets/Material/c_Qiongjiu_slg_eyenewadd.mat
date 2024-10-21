@@ -61,6 +61,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Alpha: 1
     - _AnisotropyShift: 0.05
     - _BlendOp: 0
     - _BlendOpOverlay: 0
@@ -97,6 +98,7 @@ Material:
     - _Mode: 0
     - _NoseSpecMax: 1
     - _NoseSpecMin: 0
+    - _NoseSpecularOffset: 0
     - _OcclusionStrength: 1
     - _OutlineScaleFactor: 0.0001
     - _OutlineWidth: 0
@@ -107,7 +109,7 @@ Material:
     - _RampMax: 1
     - _RampMin: 0
     - _SHADER_ID: 5
-    - _ScrBlendModeOverlay: 1
+    - _ScrBlendModeOverlay: 0
     - _ShaderEnum: 4
     - _ShadowBiasDistance: 0.1
     - _ShadowStrength: 0.5
@@ -119,12 +121,12 @@ Material:
     - _SpecularParallax: 0
     - _SrcBlend: 1
     - _SrcBlendMode: 1
-    - _StencilComp: 0
+    - _StencilComp: 8
     - _StencilCompOverlay: 0
     - _StencilFailOp: 0
-    - _StencilPassOp: 0
+    - _StencilPassOp: 2
     - _StencilPassOpOverLay: 0
-    - _StencilRef: 0
+    - _StencilRef: 8
     - _StencilRefOverlay: 0
     - _StencilZFailOp: 0
     - _Stocking: 0

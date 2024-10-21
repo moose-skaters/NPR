@@ -67,6 +67,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AdjustShadowBias: 0
+    - _Alpha: 1
     - _AnisotropicGXX: 0
     - _AnisotropicSpecular: 0
     - _Anisotropy: 1
@@ -74,6 +75,7 @@ Material:
     - _AoeSelect: 0
     - _BaseInsideLerp: 0
     - _BlendOp: 0
+    - _BlendOpOverlay: 0
     - _BlendSmoothness: 0
     - _BumpScale: 1
     - _CampColorIndex: 0
@@ -87,6 +89,7 @@ Material:
     - _DissolveIntensity: 0
     - _DoubleSided: 1
     - _DstBlendMode: 0
+    - _DstBlendModeOverlay: 1
     - _EmissionScale: 0
     - _EmissiveIntensity: 0
     - _EnableHolographicScanline: 0
@@ -94,6 +97,7 @@ Material:
     - _FaceShadowSoftness: 0
     - _FakeIntensity: 0.25
     - _FurShellThickness: 0.5
+    - _HairShadowDistace: 0.1
     - _HairSpecularIntensity: 1
     - _HolographicIntensity: 0
     - _HolographicWidth: 200
@@ -103,6 +107,9 @@ Material:
     - _InsideHeightContrast: 1
     - _LightIndex: 0
     - _Metallic: 1
+    - _NoseSpecMax: 1
+    - _NoseSpecMin: 0
+    - _NoseSpecularOffset: 0
     - _OcclusionStrength: 1
     - _OutlineIntensity: 1
     - _OutlineOffset: 0
@@ -115,17 +122,25 @@ Material:
     - _ReflectionFresnelF0: 0
     - _ReflectionIntensity: 0.35
     - _SSSIntensity: 0.5
+    - _ScrBlendModeOverlay: 0
     - _ShaderEnum: 0
     - _ShadowBiasDistance: 0.1
     - _Smoothness: 1
     - _SrcBlendMode: 1
     - _StencilComp: 0
+    - _StencilCompOverlay: 0
+    - _StencilFailOp: 0
     - _StencilOp: 2
+    - _StencilPassOp: 0
+    - _StencilPassOpOverLay: 0
+    - _StencilRef: 0
     - _StencilRefC: 200
     - _StencilRefCharStart: 200
     - _StencilRefE: 204
     - _StencilRefF: 200
     - _StencilRefH: 203
+    - _StencilRefOverlay: 0
+    - _StencilZFailOp: 0
     - _Stocking: 0
     - _StockingFalloffPower: 1
     - _Tutorial: 0
@@ -151,6 +166,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _FaceLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _FaceShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _FaceSpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _FinalTint: {r: 1, g: 1, b: 1, a: 1}
     - _HairSpecularColorLight: {r: 1, g: 1, b: 1, a: 1}
     - _HairSpecularColorShadow: {r: 1, g: 1, b: 1, a: 1}
