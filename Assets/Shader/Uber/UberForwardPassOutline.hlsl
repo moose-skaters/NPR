@@ -100,7 +100,7 @@ half4 LitPassOutlineFragment(Varyings input) : SV_Target
     UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
     
     half4 color = 0;
-    color.a     = 1;
+    color.a     = _Alpha;
     return color;
 }
 

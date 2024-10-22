@@ -2,23 +2,22 @@ Shader "Unlit/Uber"
 {
     Properties
     {
-        [Header(Base)]
-        [KeywordEnum(Base,Skin,Face,Hair,Eye)] _ShaderEnum("Shader类型", int) = 0
-        [Enum(UnityEngine.Rendering.CullMode)] _Cull ("Cull (Default back)", Float) = 2
-        [Enum(UnityEngine.Rendering.BlendMode)] _SrcBlendMode ("Src BlendMode", Float) = 1
-        [Enum(UnityEngine.Rendering.BlendMode)] _DstBlendMode ("Des BlendMode", Float) = 0
-        [Enum(UnityEngine.Rendering.BlendOp)] _BlendOp ("Blend Operator", Float) = 0
-        [Enum(Off,0, On,1)] _ZWrite("ZWrite (Default On)",Float) = 1 
-        [Enum(UnityEngine.Rendering.CompareFunction)]_ZTestMode ("ZTestMode", Float) = 4
-        [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
-        [MainColor] _BaseColor("Color", Color) = (1,1,1,1)
-        _Smoothness("Smoothness", Range(0.0, 1.0)) = 1
-        _Metallic("Metallic", Range(0.0, 1.0)) = 1
-        _OcclusionStrength("OcclusionStrength",Range(0,1)) = 1
-        _RMOTex("Metallic", 2D) = "black" {}
-        _EmissionScale("EmissionScale",Range(0,5)) = 0
-        _BumpMap("Normal Map", 2D) = "bump" {}
-        _BumpScale("Scale", Range(0,4)) = 1.0
+        
+        [Main(Base, _, on, off)] 
+		_Base ("Base设置", float) = 0
+        [SubEnum(Base,Base,0,Skin,1,Face,2,Hair,3,Eye,4)] _ShaderEnum("Shader类型", int) = 0
+        [Sub(Base)][MainTexture] _BaseMap("Albedo", 2D) = "white" {}
+        [Sub(Base)][MainColor] _BaseColor("Color", Color) = (1,1,1,1)
+        [Sub(Base)]_Smoothness("Smoothness", Range(0.0, 1.0)) = 1
+        [Sub(Base)]_Metallic("Metallic", Range(0.0, 1.0)) = 1
+        [Sub(Base)]_OcclusionStrength("OcclusionStrength",Range(0,1)) = 1
+        [Sub(Base)]_RMOTex("RMOTex", 2D) = "black" {}
+        [Sub(Base)]_EmissionScale("EmissionScale",Range(0,5)) = 0
+        [Sub(Base)]_BumpMap("Normal Map", 2D) = "bump" {}
+        [Sub(Base)]_BumpScale("Scale", Range(0,4)) = 1.0
+        
+        
+        
         [Header(Hair)]
         _Alpha("Alpha",Range(0,1))     = 1.0
         _AnisotropyShift("AnisotropyShift",Range(0,0.1)) = 0.05
@@ -72,6 +71,13 @@ Shader "Unlit/Uber"
         _StencilRefOverlay ("Overlay pass stencil reference (Default 0)", Range(0,255)) = 0
         [Enum(UnityEngine.Rendering.CompareFunction)] _StencilCompOverlay("Overlay pass stencil comparison (Default disabled)",Int) = 0
         [Enum(UnityEngine.Rendering.StencilOp)] _StencilPassOpOverLay("Overlay Stencil pass comparison (Default keep)",Int) = 0
+        
+        [Enum(UnityEngine.Rendering.CullMode)] _Cull ("Cull (Default back)", Float) = 2
+        [Enum(UnityEngine.Rendering.BlendMode)] _SrcBlendMode ("Src BlendMode", Float) = 1
+        [Enum(UnityEngine.Rendering.BlendMode)] _DstBlendMode ("Des BlendMode", Float) = 0
+        [Enum(UnityEngine.Rendering.BlendOp)] _BlendOp ("Blend Operator", Float) = 0
+        [Enum(Off,0, On,1)] _ZWrite("ZWrite (Default On)",Float) = 1 
+        [Enum(UnityEngine.Rendering.CompareFunction)]_ZTestMode ("ZTestMode", Float) = 4
     }
     SubShader
     {
@@ -445,4 +451,5 @@ Shader "Unlit/Uber"
             ENDHLSL
         }
     }
+    CustomEditor "LWGUI.LWGUI"
 }

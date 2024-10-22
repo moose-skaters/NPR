@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5563aa21533656c46b3e8b01ba5c418d, type: 3}
   m_Name: CelHairShadow
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   setting:
     passEvent: 250
     hairLayer:

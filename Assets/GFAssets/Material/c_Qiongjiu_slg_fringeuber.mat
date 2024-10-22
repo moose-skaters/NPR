@@ -65,12 +65,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _AdjustShadowBias: 1
-    - _Alpha: 0.5
+    - _Alpha: 0
     - _AnisotropicGXX: 0
     - _AnisotropicSpecular: 1
     - _Anisotropy: 1
     - _AnisotropyShift: 0.0484
     - _AoeSelect: 0
+    - _Base: 0
     - _BaseInsideLerp: 0
     - _BlendOp: 0
     - _BlendOpOverlay: 0
@@ -159,6 +160,7 @@ Material:
     - _ZWrite: 1
     - _fresnelIndensity: 5
     - _fresnelScale: 1
+    - _group1: 0
     m_Colors:
     - _AoeSelectColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0.8}

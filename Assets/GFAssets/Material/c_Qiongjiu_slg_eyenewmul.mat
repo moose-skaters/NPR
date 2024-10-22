@@ -120,10 +120,10 @@ Material:
     - _SpecularParallax: 0
     - _SrcBlend: 1
     - _SrcBlendMode: 2
-    - _StencilComp: 8
+    - _StencilComp: 0
     - _StencilCompOverlay: 0
     - _StencilFailOp: 0
-    - _StencilPassOp: 2
+    - _StencilPassOp: 0
     - _StencilPassOpOverLay: 0
     - _StencilRef: 8
     - _StencilRefOverlay: 0
