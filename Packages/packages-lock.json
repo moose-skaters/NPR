@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.jasonma.lwgui": {
+      "version": "https://github.com/JasonMa0012/LWGUI.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "81990ced49d7ce294532a714cd3958b83c441c88"
+    },
     "com.unity.burst": {
       "version": "1.8.11",
       "depth": 1,
