@@ -116,7 +116,7 @@ half4 LitPassFragment(Varyings input) : SV_Target
     float3 mainLightDirection = GetMainLight().direction;
     InputData inputData;
     InitializeInputData(input, surfaceData.normalTS, inputData);
-    #if defined _STOCKING_ON
+    #if defined _USESTOCKING_ON
     float fresnel = _fresnelScale*pow(saturate(dot(inputData.normalWS, inputData.viewDirectionWS)), _fresnelIndensity);
     float3 fresnelColor = lerp(_fresnelFallOffColor,_fresnelCenterColor,saturate(fresnel));
     surfaceData.albedo *= fresnelColor;

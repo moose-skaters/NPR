@@ -3,22 +3,21 @@ Shader "Unlit/Uber"
     Properties
     {
         
-        [Main(Base, _, on, off)] 
-		_Base ("Base设置", float) = 0
-        [SubEnum(Base,Base,0,Skin,1,Face,2,Hair,3,Eye,4)] _ShaderEnum("Shader类型", int) = 0
-        [Sub(Base)][MainTexture] _BaseMap("Albedo", 2D) = "white" {}
-        [Sub(Base)][MainColor] _BaseColor("Color", Color) = (1,1,1,1)
-        [Sub(Base)]_Smoothness("Smoothness", Range(0.0, 1.0)) = 1
-        [Sub(Base)]_Metallic("Metallic", Range(0.0, 1.0)) = 1
-        [Sub(Base)]_OcclusionStrength("OcclusionStrength",Range(0,1)) = 1
-        [Sub(Base)]_RMOTex("RMOTex", 2D) = "black" {}
-        [Sub(Base)]_EmissionScale("EmissionScale",Range(0,5)) = 0
-        [Sub(Base)]_BumpMap("Normal Map", 2D) = "bump" {}
-        [Sub(Base)]_BumpScale("Scale", Range(0,4)) = 1.0
+        [FoldoutBegin(_BaseEnd)]_Base("Base", Float) = 1
+        [KeywordEnum(Base,Face,Hair,Eye)]_ShaderEnum("Shader类型", int) = 0
+        [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
+        [MainColor] _BaseColor("Color", Color) = (1,1,1,1)
+        _Smoothness("Smoothness", Range(0.0, 1.0)) = 1
+        _Metallic("Metallic", Range(0.0, 1.0)) = 1
+        _OcclusionStrength("OcclusionStrength",Range(0,1)) = 1
+        _RMOTex("RMOTex", 2D) = "black" {}
+        _EmissionScale("EmissionScale",Range(0,5)) = 0
+        _BumpMap("Normal Map", 2D) = "bump" {}
+        _BumpScale("Scale", Range(0,4)) = 1.0
+        [FoldoutEnd]_BaseEnd("Base", Float) = 1
         
         
-        
-        [Header(Hair)]
+        [FoldoutBegin(_HairEnd)]_Hair("Hair", Float) = 1
         _Alpha("Alpha",Range(0,1))     = 1.0
         _AnisotropyShift("AnisotropyShift",Range(0,0.1)) = 0.05
         _HairSpecularMap("HairSpecularMap",2D) = "white" {}
@@ -26,20 +25,25 @@ Shader "Unlit/Uber"
         _HairSpecularColorShadow("HairSpecularColorShadow",Color) =   (1,1,1,1)
         _HairSpecularColorLight("HairSpecularColorLight",  Color) =   (1,1,1,1)
         _HairShadowDistace("HairShadowDistace",Range(0,1))         =   0.1
+        [FoldoutEnd]_HairEnd("Hair", Float) = 1
         
-        [Header(Stocking)]
-        [Toggle]_Stocking("Stocking",Float) = 0.0
+        
+        [FoldoutBegin(_StockingEnd)]_Stocking("Stocking", Float) = 1
+        [Toggle]_UseStocking("UseStocking",Float) = 0.0
         _fresnelScale("fresnelScale", Range(0, 1)) = 1
 		_fresnelIndensity("fresnelIndensity", Range(0, 5)) = 5
         _fresnelCenterColor("fresnelCenterColor",Color) = (1,1,1,1)
         _fresnelFallOffColor("fresnelFallOffColor",Color) = (1,1,1,1)
+        [FoldoutEnd]_StockingEnd("Stocking", Float) = 1
         
-        [Header(Ramp)]
-        _RampMap("RampTex", 2D)    = "white" {}
+        
+        [FoldoutBegin(_RampEnd)]_Ramp("Ramp", Float) = 1
+        [Ramp]_RampMap("RampTex", 2D)    = "white" {}
         _RampMin("RampMin", Range(0,1)) = 0.0
         _RampMax("RampMax", Range(0,1)) = 1.0
+        [FoldoutEnd]_RampEnd("Ramp", Float) = 1
         
-        [Header(Face)]
+        [FoldoutBegin(_FaceEnd)]_Face("Face", Float) = 1
         _SDFMap("SDFMap",  2D)    = "white" {}
         _FaceShadowOffset("FaceShadowOffset",Range(0,1)) = 0
         _FaceShadowSoftness("FaceShadowSoftness",Range(0,1)) = 0
@@ -49,35 +53,43 @@ Shader "Unlit/Uber"
         _NoseSpecMax("NoseSpecMax",Range(0,1))  = 1
         _NoseSpecularOffset("NoseSpecularOffset",Range(0,1)) = 0
         _FaceSpecularColor("FaceSpecularColor",Color) = (1,1,1,1)
+        [FoldoutEnd]_FaceEnd("Face", Float) = 1
         
-        [Header(Outline)]
+        [FoldoutBegin(_OutlineEnd)]_Outline("Outline", Float) = 1
         _OutlineAdj01 ("描边距离范围x近处-y中间-z远距离",vector) = (0.01,2,6,0)
         _OutlineAdj02 ("描边范围缩放因子x近处-y中间-z远距离",vector) = (0.5, 0.74, 1.5, 0)
         _OutlineWidth ("描边粗细",float) = 0.56
         _OutlineScaleFactor ("描边缩放因子",float) = 0.0001
         _OutlineZOffset ("描边视角方向偏移",float) = 0
+        [FoldoutEnd]_OutlineEnd("Outline", Float) = 1
         
-        [Header(Stencil)]
+        
+        [FoldoutBegin(_StencilEnd)]_Stencil("Stencil", Float) = 1
         _StencilRef ("Stencil reference (Default 0)",Range(0,255)) = 0
         [Enum(UnityEngine.Rendering.CompareFunction)] _StencilComp("Stencil comparison (Default disabled)",Int) = 0
         [Enum(UnityEngine.Rendering.StencilOp)] _StencilPassOp("Stencil pass comparison (Default keep)",Int) = 0
         [Enum(UnityEngine.Rendering.StencilOp)] _StencilFailOp("Stencil fail comparison (Default keep)",Int) = 0
         [Enum(UnityEngine.Rendering.StencilOp)] _StencilZFailOp("Stencil z fail comparison (Default keep)",Int) = 0
+        [FoldoutEnd]_StencilEnd("Stencil", Float) = 1
         
-        [Header(Draw Overlay)]
+        
+        [FoldoutBegin(_DrawOverlayEnd)]_DrawOverlay("DrawOverlay", Float) = 1
         [Enum(UnityEngine.Rendering.BlendMode)] _ScrBlendModeOverlay("Overlay pass scr blend mode (Default One)",Float) = 1
         [Enum(UnityEngine.Rendering.BlendMode)] _DstBlendModeOverlay("Overlay pass dst blend mode (Default Zero)", Float) = 0
         [Enum(UnityEngine.Rendering.BlendOp)]   _BlendOpOverlay("Overlay pass blend operation (Default Add)", Float) = 0
         _StencilRefOverlay ("Overlay pass stencil reference (Default 0)", Range(0,255)) = 0
         [Enum(UnityEngine.Rendering.CompareFunction)] _StencilCompOverlay("Overlay pass stencil comparison (Default disabled)",Int) = 0
         [Enum(UnityEngine.Rendering.StencilOp)] _StencilPassOpOverLay("Overlay Stencil pass comparison (Default keep)",Int) = 0
+        [FoldoutEnd]_DrawOverlayEnd("DrawOverlay", Float) = 1
         
+        [FoldoutBegin(_NormalSettingsEnd)]_NormalSettings("NormalSettings", Float) = 1
         [Enum(UnityEngine.Rendering.CullMode)] _Cull ("Cull (Default back)", Float) = 2
         [Enum(UnityEngine.Rendering.BlendMode)] _SrcBlendMode ("Src BlendMode", Float) = 1
         [Enum(UnityEngine.Rendering.BlendMode)] _DstBlendMode ("Des BlendMode", Float) = 0
         [Enum(UnityEngine.Rendering.BlendOp)] _BlendOp ("Blend Operator", Float) = 0
         [Enum(Off,0, On,1)] _ZWrite("ZWrite (Default On)",Float) = 1 
         [Enum(UnityEngine.Rendering.CompareFunction)]_ZTestMode ("ZTestMode", Float) = 4
+        [FoldoutEnd]_NormalSettingsEnd("NormalSettings", Float) = 1
     }
     SubShader
     {
@@ -120,7 +132,7 @@ Shader "Unlit/Uber"
             #pragma shader_feature_local_fragment _SPECULAR_SETUP
             #pragma shader_feature_local_fragment _ _SKIN_ON
             #pragma shader_feature_local_fragment _ _HAIR_ON
-            #pragma shader_feature_local_fragment _ _STOCKING_ON
+            #pragma shader_feature_local_fragment _ _USESTOCKING_ON
             // -------------------------------------
             // Universal Pipeline keywords
             #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN
@@ -451,5 +463,5 @@ Shader "Unlit/Uber"
             ENDHLSL
         }
     }
-    CustomEditor "LWGUI.LWGUI"
+    CustomEditor "UnityEditor.DanbaidongGUI.DanbaidongGUI"
 }
