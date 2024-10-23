@@ -1,7 +1,11 @@
-#ifndef UNIVERSAL_FORWARD_UBER_PASS_INCLUDED
-#define UNIVERSAL_FORWARD_UBER_PASS_INCLUDED
+#ifndef UNIVERSAL_UBER_GBUFFER_PASS_INCLUDED
+#define UNIVERSAL_UBER_GBUFFER_PASS_INCLUDED
 
-#include "UberLighting.hlsl"
+#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/UnityGBuffer.hlsl"
+
+
+
 
 
 
@@ -33,6 +37,7 @@ struct Varyings
     UNITY_VERTEX_OUTPUT_STEREO
 };
 
+
 void InitializeInputData(Varyings input, half3 normalTS, out InputData inputData)
 {
     inputData = (InputData)0;
@@ -60,7 +65,7 @@ void InitializeInputData(Varyings input, half3 normalTS, out InputData inputData
 ///////////////////////////////////////////////////////////////////////////////
 
 // Used in Standard (Physically Based) shader
-Varyings LitPassVertex(Attributes input)
+Varyings UberGBufferPassVertex(Attributes input)
 {
     Varyings output = (Varyings)0;
 
@@ -93,13 +98,12 @@ Varyings LitPassVertex(Attributes input)
     output.posNDCw    =  vertexInput.positionNDC.w;
     output.positionSS =  ComputeScreenPos(vertexInput.positionCS);
     #endif
-
     
     return output;
 }
 
 // Used in Standard (Physically Based) shader
-half4 LitPassFragment(Varyings input) : SV_Target
+FragmentOutput UberGBufferPassFragment(Varyings input)
 {
     UNITY_SETUP_INSTANCE_ID(input);
     UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
@@ -108,45 +112,24 @@ half4 LitPassFragment(Varyings input) : SV_Target
 
     SurfaceData surfaceData;
     InitializeStandardLitSurfaceData(input.uv, surfaceData);
-    float3 mainLightDirection = GetMainLight().direction;
+
     InputData inputData;
     InitializeInputData(input, surfaceData.normalTS, inputData);
-    #if defined _USESTOCKING_ON
-    float fresnel = _fresnelScale*pow(saturate(dot(inputData.normalWS, inputData.viewDirectionWS)), _fresnelIndensity);
-    float3 fresnelColor = lerp(_fresnelFallOffColor,_fresnelCenterColor,saturate(fresnel));
-    surfaceData.albedo *= fresnelColor;
-    #endif
-    #if defined _SHADERENUM_HAIR
-    float  hairSpecularY =  input.uv1.y -inputData.viewDirectionWS.y *_AnisotropyShift;
-    float4 hairSpecular  =  SAMPLE_TEXTURE2D(_HairSpecularMap, sampler_HairSpecularMap, float2(input.uv1.x,hairSpecularY)) *_HairSpecularIntensity * lerp(_HairSpecularColorShadow,_HairSpecularColorLight,saturate(dot(inputData.normalWS,mainLightDirection))) ;
-    #endif
-    half4 color = UniversalFragmentPBR(inputData, surfaceData);
-    #if defined _SHADERENUM_HAIR
-    color      += hairSpecular;
-    #endif
-    #if defined _SHADERENUM_FACE
-    float depth = (input.positionCS.z / input.positionCS.w);
-    float linearEyeDepth = LinearEyeDepth(depth, _ZBufferParams);
-    float2 scrPos = input.positionSS.xy / input.positionSS.w;
-    float3 viewLightDir = normalize(TransformWorldToViewDir(mainLightDirection)) / input.posNDCw;
-    float2 samplingPoint = scrPos + _HairShadowDistace * viewLightDir.xy;
-    float hairDepth = SAMPLE_TEXTURE2D(_HairSoildColor, sampler_HairSoildColor, samplingPoint).g;
-    hairDepth = LinearEyeDepth(hairDepth, _ZBufferParams);
-    float depthContrast = linearEyeDepth  > hairDepth  + 0.01 ? 0: 1;
-    float hairShadow = depthContrast;
     
-    float faceSDF = DiffuseFaceLighting(mainLightDirection,input.uv1,hairShadow);
-    
-    color.rgb = lerp(surfaceData.albedo*_FaceShadowColor,surfaceData.albedo*_FaceLightColor,faceSDF)  + SpecularFaceLighting(mainLightDirection,input.uv1);
-    // color = float4(surfaceData.albedo,1);
-    #endif
-    #if defined _SHADERENUM_EYE
-    color = float4(surfaceData.albedo,1);
-    #endif
-    color.a = _Alpha;
 
-    
-    return color;
+
+    // Stripped down version of UniversalFragmentPBR().
+
+    // in LitForwardPass GlobalIllumination (and temporarily LightingPhysicallyBased) are called inside UniversalFragmentPBR
+    // in Deferred rendering we store the sum of these values (and of emission as well) in the GBuffer
+    BRDFData brdfData;
+    InitializeBRDFData(surfaceData.albedo, surfaceData.metallic, surfaceData.specular, surfaceData.smoothness, surfaceData.alpha, brdfData);
+
+    Light mainLight = GetMainLight(inputData.shadowCoord, inputData.positionWS, inputData.shadowMask);
+    MixRealtimeAndBakedGI(mainLight, inputData.normalWS, inputData.bakedGI, inputData.shadowMask);
+    half3 color = GlobalIllumination(brdfData, inputData.bakedGI, surfaceData.occlusion, inputData.positionWS, inputData.normalWS, inputData.viewDirectionWS);
+
+    return BRDFDataToGbuffer(brdfData, inputData, surfaceData.smoothness, surfaceData.emission + color, surfaceData.occlusion);
 }
 
 #endif
