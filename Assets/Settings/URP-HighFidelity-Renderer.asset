@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4753317522303686900
+--- !u!114 &-4273185826548533863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5563aa21533656c46b3e8b01ba5c418d, type: 3}
   m_Name: CelHairShadow
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   setting:
     passEvent: 250
     hairLayer:
       serializedVersion: 2
-      m_Bits: 64
+      m_Bits: 0
     faceLayer:
       serializedVersion: 2
       m_Bits: 0
     queueMin: 2000
     queueMax: 3000
-    material: {fileID: 2100000, guid: 64f640910af37664a879220bb0932ef0, type: 2}
+    material: {fileID: 0}
 --- !u!114 &-1878332245247344467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,8 +64,10 @@ MonoBehaviour:
       type: 3}
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
-  - {fileID: -4753317522303686900}
-  m_RendererFeatureMap: adc0de57c6d2eee50ce772cae5d208be
+  - {fileID: 7257818585145050511}
+  - {fileID: 8144438632594530607}
+  - {fileID: -4273185826548533863}
+  m_RendererFeatureMap: adc0de57c6d2eee58f85ccb38cf3b8642fe1c306c9db06719935578d2198b2c4
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -99,10 +101,38 @@ MonoBehaviour:
     failOperation: 0
     zFailOperation: 0
   m_ShadowTransparentReceive: 1
-  m_RenderingMode: 0
+  m_RenderingMode: 1
   m_DepthPrimingMode: 0
-  m_CopyDepthMode: 0
+  m_CopyDepthMode: 2
   m_AccurateGbufferNormals: 0
   m_ClusteredRendering: 0
   m_TileSize: 32
-  m_IntermediateTextureMode: 0
+  m_IntermediateTextureMode: 1
+--- !u!114 &7257818585145050511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 012713d46f1d0e4459a5c975dc9508cd, type: 3}
+  m_Name: DrawFogRenderPassFeature
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  settings:
+    RenderPassEvent: 500
+--- !u!114 &8144438632594530607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab79580bcd39b5d4f91b3e031b80a0dc, type: 3}
+  m_Name: VolumetricCloudsURP
+  m_EditorClassIdentifier: 
+  m_Active: 0
