@@ -12,6 +12,7 @@ namespace UnityEngine.Rendering.Universal.Internal
         static ShaderTagId s_ShaderTagLit = new ShaderTagId("Lit");
         static ShaderTagId s_ShaderTagSimpleLit = new ShaderTagId("SimpleLit");
         static ShaderTagId s_ShaderTagUnlit = new ShaderTagId("Unlit");
+        static ShaderTagId s_ShaderTagToonCharacter = new ShaderTagId("ToonCharacter");
         static ShaderTagId s_ShaderTagUniversalGBuffer = new ShaderTagId("UniversalGBuffer");
         static ShaderTagId s_ShaderTagUniversalMaterialType = new ShaderTagId("UniversalMaterialType");
 
@@ -38,17 +39,19 @@ namespace UnityEngine.Rendering.Universal.Internal
             m_RenderStateBlock.stencilReference = stencilReference;
             m_RenderStateBlock.mask = RenderStateMask.Stencil;
 
-            m_ShaderTagValues = new ShaderTagId[4];
+            m_ShaderTagValues = new ShaderTagId[5];
             m_ShaderTagValues[0] = s_ShaderTagLit;
             m_ShaderTagValues[1] = s_ShaderTagSimpleLit;
             m_ShaderTagValues[2] = s_ShaderTagUnlit;
-            m_ShaderTagValues[3] = new ShaderTagId(); // Special catch all case for materials where UniversalMaterialType is not defined or the tag value doesn't match anything we know.
+            m_ShaderTagValues[3] = s_ShaderTagToonCharacter;
+            m_ShaderTagValues[4] = new ShaderTagId(); // Special catch all case for materials where UniversalMaterialType is not defined or the tag value doesn't match anything we know.
 
-            m_RenderStateBlocks = new RenderStateBlock[4];
+            m_RenderStateBlocks = new RenderStateBlock[5];
             m_RenderStateBlocks[0] = DeferredLights.OverwriteStencil(m_RenderStateBlock, (int)StencilUsage.MaterialMask, (int)StencilUsage.MaterialLit);
             m_RenderStateBlocks[1] = DeferredLights.OverwriteStencil(m_RenderStateBlock, (int)StencilUsage.MaterialMask, (int)StencilUsage.MaterialSimpleLit);
             m_RenderStateBlocks[2] = DeferredLights.OverwriteStencil(m_RenderStateBlock, (int)StencilUsage.MaterialMask, (int)StencilUsage.MaterialUnlit);
-            m_RenderStateBlocks[3] = m_RenderStateBlocks[0];
+            m_RenderStateBlocks[3] = DeferredLights.OverwriteStencil(m_RenderStateBlock, (int)StencilUsage.MaterialMask, (int)StencilUsage.MaterialToonCharacter);
+            m_RenderStateBlocks[4] = m_RenderStateBlocks[0];
         }
 
         public override void Configure(CommandBuffer cmd, RenderTextureDescriptor cameraTextureDescriptor)
