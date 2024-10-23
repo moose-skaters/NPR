@@ -63,6 +63,8 @@ Material:
     m_Floats:
     - _Alpha: 1
     - _AnisotropyShift: 0.05
+    - _Base: 0
+    - _BaseEnd: 1
     - _BlendOp: 0
     - _BlendOpOverlay: 0
     - _BumpScale: 1
@@ -75,6 +77,8 @@ Material:
     - _DetailNormalMapScale: 1
     - _DetailOnOff: 0
     - _DetailTiling: 2
+    - _DrawOverlay: 1
+    - _DrawOverlayEnd: 1
     - _DstBlend: 0
     - _DstBlendMode: 1
     - _DstBlendModeOverlay: 1
@@ -83,6 +87,8 @@ Material:
     - _EnableHolographicScanline: 0
     - _EnvironmentExposure: 1
     - _EnvironmentRotate: 0
+    - _Face: 1
+    - _FaceEnd: 1
     - _FaceShadowOffset: 0
     - _FaceShadowSoftness: 0
     - _FresnelClamp: 1
@@ -90,27 +96,35 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Hair: 1
+    - _HairEnd: 1
     - _HairShadowDistace: 0.1
     - _HairSpecularIntensity: 1
     - _HolographicIntensity: 0
     - _HolographicWidth: 200
     - _Metallic: 0
     - _Mode: 0
+    - _NormalSettings: 1
+    - _NormalSettingsEnd: 1
     - _NoseSpecMax: 1
     - _NoseSpecMin: 0
     - _NoseSpecularOffset: 0
     - _OcclusionStrength: 1
+    - _Outline: 1
+    - _OutlineEnd: 1
     - _OutlineScaleFactor: 0.0001
     - _OutlineWidth: 0
     - _OutlineZOffset: 0
     - _Parallax: 0.02
     - _Power: 1
     - _QueueOffset: 1
+    - _Ramp: 1
+    - _RampEnd: 1
     - _RampMax: 1
     - _RampMin: 0
     - _SHADER_ID: 5
     - _ScrBlendModeOverlay: 0
-    - _ShaderEnum: 4
+    - _ShaderEnum: 3
     - _ShadowBiasDistance: 0.1
     - _ShadowStrength: 0.5
     - _Shift: 1
@@ -121,8 +135,10 @@ Material:
     - _SpecularParallax: 0
     - _SrcBlend: 1
     - _SrcBlendMode: 1
+    - _Stencil: 1
     - _StencilComp: 8
     - _StencilCompOverlay: 0
+    - _StencilEnd: 1
     - _StencilFailOp: 0
     - _StencilPassOp: 2
     - _StencilPassOpOverLay: 0
@@ -130,8 +146,10 @@ Material:
     - _StencilRefOverlay: 0
     - _StencilZFailOp: 0
     - _Stocking: 0
+    - _StockingEnd: 1
     - _Transparent: 1
     - _UVSec: 0
+    - _UseStocking: 0
     - _ZTestMode: 4
     - _ZWrite: 0
     - _fresnelIndensity: 5

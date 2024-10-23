@@ -1,0 +1,436 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2948475984617848311
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
+  m_Name: Tonemapping
+  m_EditorClassIdentifier: 
+  active: 1
+  mode:
+    m_OverrideState: 0
+    m_Value: 2
+  neutralHDRRangeReductionMode:
+    m_OverrideState: 0
+    m_Value: 2
+  acesPreset:
+    m_OverrideState: 0
+    m_Value: 3
+  hueShiftAmount:
+    m_OverrideState: 0
+    m_Value: 0
+  detectPaperWhite:
+    m_OverrideState: 0
+    m_Value: 0
+  paperWhite:
+    m_OverrideState: 0
+    m_Value: 300
+  detectBrightnessLimits:
+    m_OverrideState: 0
+    m_Value: 1
+  minNits:
+    m_OverrideState: 0
+    m_Value: 0.005
+  maxNits:
+    m_OverrideState: 0
+    m_Value: 1000
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: Global Volume Profile
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: 5303890952133170418}
+  - {fileID: -2948475984617848311}
+  - {fileID: 2950283006216299429}
+--- !u!114 &2950283006216299429
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ad8f4d7679906409c1d4607b83c64a, type: 3}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: 
+  active: 0
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 1
+    m_Value: 1
+  _Local:
+    m_OverrideState: 0
+    m_Value: 0
+  _BlueNoiseIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 2000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 2050
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 512
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _FadeInStart:
+    m_OverrideState: 1
+    m_Value: 0
+  _FadeInDistance:
+    m_OverrideState: 1
+    m_Value: 200000
+  _HeightGradientMin:
+    m_OverrideState: 0
+    m_Value: 0
+  _HeightGradientMax:
+    m_OverrideState: 0
+    m_Value: 1
+  _CloudDensityFirstLayer:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudDensitySecondLayer:
+    m_OverrideState: 0
+    m_Value: 2
+  _WindDirection:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0}
+  _MediumWindSpeed:
+    m_OverrideState: 1
+    m_Value: 0
+  _LargeWindSpeed:
+    m_OverrideState: 1
+    m_Value: 0
+  _SmallWindSpeed:
+    m_OverrideState: 1
+    m_Value: 0
+  _VerticalShapeWindDisplacement:
+    m_OverrideState: 1
+    m_Value: 0
+  _ShapeScaleFirstLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ShapeFactorFirstLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ShapeScaleSecondLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ShapeFactorSecondLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ShapeNoiseOffset:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0}
+  _VerticalShapeNoiseOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _AltitudeDistortionFirstLayer:
+    m_OverrideState: 0
+    m_Value: 0
+  _AltitudeDistortionSecondLayer:
+    m_OverrideState: 0
+    m_Value: 0
+  _CloudMapTiling:
+    m_OverrideState: 1
+    m_Value: {x: 0.001, y: 0.001, z: 0, w: 0}
+  _ErosionFactorFirstLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ErosionScaleFirstLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ErosionFactorSecondLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ErosionScaleSecondLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ErosionFactorCompensationFirstLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ErosionFactorCompensationSecondLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _PowderEffectIntensity:
+    m_OverrideState: 1
+    m_Value: 0.14
+  CumulusDensityCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.090730056
+        value: 0.99279726
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulusErosionCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.10314331
+        value: 0.884375
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.33618164
+        value: 0.97112656
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  AltoStratusDensityCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  AltoStratusErosionCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulonimbusDensityCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulonimbusErosionCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.55
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.7
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.464
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.127
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.338
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 4
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &5303890952133170418
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  skipIterations:
+    m_OverrideState: 0
+    m_Value: 1
+  threshold:
+    m_OverrideState: 1
+    m_Value: 0.9
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
+  scatter:
+    m_OverrideState: 0
+    m_Value: 0.7
+  clamp:
+    m_OverrideState: 0
+    m_Value: 65472
+  tint:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  highQualityFiltering:
+    m_OverrideState: 0
+    m_Value: 0
+  downscale:
+    m_OverrideState: 0
+    m_Value: 0
+  maxIterations:
+    m_OverrideState: 0
+    m_Value: 6
+  dirtTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
+  dirtIntensity:
+    m_OverrideState: 0
+    m_Value: 0

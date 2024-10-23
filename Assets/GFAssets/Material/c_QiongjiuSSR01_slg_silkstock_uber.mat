@@ -12,6 +12,7 @@ Material:
   m_ValidKeywords:
   - _SHADERENUM_BASE
   - _STOCKING_ON
+  - _USESTOCKING_ON
   m_InvalidKeywords:
   - _RAMPMAP
   - _USE_STOCKING
@@ -74,6 +75,8 @@ Material:
     - _Anisotropy: 1
     - _AnisotropyShift: 0.05
     - _AoeSelect: 0
+    - _Base: 1
+    - _BaseEnd: 1
     - _BaseInsideLerp: 0
     - _BlendOp: 0
     - _BlendOpOverlay: 0
@@ -89,15 +92,21 @@ Material:
     - _DirOutlineWidthExt: 0
     - _DissolveIntensity: 0
     - _DoubleSided: 0
+    - _DrawOverlay: 1
+    - _DrawOverlayEnd: 1
     - _DstBlendMode: 0
     - _DstBlendModeOverlay: 1
     - _EmissionScale: 0
     - _EmissiveIntensity: 0
     - _EnableHolographicScanline: 0
+    - _Face: 1
+    - _FaceEnd: 1
     - _FaceShadowOffset: 0
     - _FaceShadowSoftness: 0
     - _FakeIntensity: 0.25
     - _FurShellThickness: 0.5
+    - _Hair: 1
+    - _HairEnd: 1
     - _HairShadowDistace: 0.1
     - _HairSpecularIntensity: 1
     - _HolographicIntensity: 0
@@ -108,16 +117,22 @@ Material:
     - _InsideHeightContrast: 1
     - _LightIndex: 0
     - _Metallic: 1
+    - _NormalSettings: 1
+    - _NormalSettingsEnd: 1
     - _NoseSpecMax: 1
     - _NoseSpecMin: 0
     - _NoseSpecularOffset: 0
     - _OcclusionStrength: 1
+    - _Outline: 1
+    - _OutlineEnd: 1
     - _OutlineIntensity: 1
     - _OutlineOffset: 0
     - _OutlineScaleFactor: 0.0001
     - _OutlineWidth: 0.7
     - _OutlineZBias: 0
     - _OutlineZOffset: 0
+    - _Ramp: 1
+    - _RampEnd: 1
     - _RampMax: 1
     - _RampMin: 0
     - _ReflectionFresnelF0: 0
@@ -128,8 +143,10 @@ Material:
     - _ShadowBiasDistance: 0.1
     - _Smoothness: 1
     - _SrcBlendMode: 1
+    - _Stencil: 1
     - _StencilComp: 0
     - _StencilCompOverlay: 0
+    - _StencilEnd: 1
     - _StencilFailOp: 0
     - _StencilOp: 2
     - _StencilPassOp: 0
@@ -142,7 +159,8 @@ Material:
     - _StencilRefH: 203
     - _StencilRefOverlay: 0
     - _StencilZFailOp: 0
-    - _Stocking: 1
+    - _Stocking: 0
+    - _StockingEnd: 1
     - _StockingFalloffPower: 0.42
     - _Tutorial: 0
     - _UpAxis: 0
@@ -154,6 +172,7 @@ Material:
     - _UseGIFlatten: 0
     - _UseRampMap: 1
     - _UseSpecularUV2: 0
+    - _UseStocking: 1
     - _UseStockingFalloff: 1
     - _UseSubsurfaceScattering: 0
     - _UseVolumetricEffect: 0

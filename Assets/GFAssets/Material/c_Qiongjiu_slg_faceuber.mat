@@ -78,7 +78,8 @@ Material:
     - _Anisotropy: 1
     - _AnisotropyShift: 0
     - _AoeSelect: 0
-    - _Base: 1
+    - _Base: 0
+    - _BaseEnd: 1
     - _BaseInsideLerp: 0
     - _BlendOp: 0
     - _BlendOpOverlay: 0
@@ -101,6 +102,8 @@ Material:
     - _DissolveIntensity: 0
     - _DissolveLerp: 1
     - _DoubleSided: 0
+    - _DrawOverlay: 1
+    - _DrawOverlayEnd: 1
     - _DstBlend: 0
     - _DstBlendMode: 0
     - _DstBlendModeOverlay: 1
@@ -111,6 +114,8 @@ Material:
     - _EnableHolographicScanline: 0
     - _EnvironmentExposure: 1
     - _EnvironmentRotate: 0
+    - _Face: 0
+    - _FaceEnd: 1
     - _FaceShadowOffset: 0
     - _FaceShadowSoftness: 0
     - _FakeIntensity: 0.25
@@ -120,6 +125,8 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Hair: 1
+    - _HairEnd: 1
     - _HairShadowDistace: 0.01
     - _HairSpecularIntensity: 1
     - _HightLight: 0
@@ -134,11 +141,15 @@ Material:
     - _LightIndex: 0
     - _Metallic: 1
     - _Mode: 0
+    - _NormalSettings: 1
+    - _NormalSettingsEnd: 1
     - _NoseSpecMax: 0.994
     - _NoseSpecMin: 0
     - _NoseSpecularOffset: 0.039
     - _OcclusionStrength: 0
     - _OlFresnelIndex: 3
+    - _Outline: 1
+    - _OutlineEnd: 1
     - _OutlineIntensity: 1
     - _OutlineMaxWidth: 3.5
     - _OutlineMinWidth: 1
@@ -149,6 +160,8 @@ Material:
     - _OutlineZOffset: 0
     - _Parallax: 0.02
     - _QueueOffset: 0
+    - _Ramp: 1
+    - _RampEnd: 1
     - _RampMax: 1
     - _RampMin: 0
     - _RampUseCharLight: 0
@@ -158,15 +171,17 @@ Material:
     - _SHADER_ID: 2
     - _SSSIntensity: 0.5
     - _ScrBlendModeOverlay: 0
-    - _ShaderEnum: 2
+    - _ShaderEnum: 1
     - _ShadowBiasDistance: 0
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendMode: 1
+    - _Stencil: 1
     - _StencilComp: 0
     - _StencilCompOverlay: 0
+    - _StencilEnd: 1
     - _StencilFailOp: 0
     - _StencilOp: 2
     - _StencilPassOp: 0
@@ -180,7 +195,8 @@ Material:
     - _StencilRefOverlay: 0
     - _StencilRefShadow: 201
     - _StencilZFailOp: 0
-    - _Stocking: 0
+    - _Stocking: 1
+    - _StockingEnd: 1
     - _StockingFalloffPower: 1
     - _Transparent: 1
     - _Tutorial: 0
@@ -195,6 +211,7 @@ Material:
     - _UseRampMap: 1
     - _UseSceneLight: 0
     - _UseSpecularUV2: 1
+    - _UseStocking: 0
     - _UseStockingFalloff: 0
     - _UseSubsurfaceScattering: 0
     - _UseVolumetricEffect: 0

@@ -1,0 +1,5827 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8948669867640042923
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudPassSetting
+  m_EditorClassIdentifier: CYEngineRuntime:CYPostProcessing:VolumetricCloudPassSetting
+  active: 1
+  _EnableVolumetricCloud:
+    m_OverrideState: 0
+    m_Value: 1
+  _AtmosphericLightCloudScatteredLuminanceScale:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1}
+  _TracingStartMaxDistanceKm:
+    m_OverrideState: 0
+    m_Value: 350
+  _TracingMaxDistanceKm:
+    m_OverrideState: 0
+    m_Value: 500
+  _ShadowTracingMaxDistanceKm:
+    m_OverrideState: 0
+    m_Value: 15
+  _ShadowSampleCountMax:
+    m_OverrideState: 0
+    m_Value: 6
+  _OutputPreExposure:
+    m_OverrideState: 0
+    m_Value: 1
+  _SkyLightCloudBottomVisibility:
+    m_OverrideState: 0
+    m_Value: 0
+  _SkyLightScatteredLuminanceScale:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseA:
+    m_OverrideState: 0
+    m_Value: 0.8
+  _PhaseB:
+    m_OverrideState: 0
+    m_Value: 0.167
+  _PhaseBlend:
+    m_OverrideState: 0
+    m_Value: 0.575
+  _MultiScatteringContribution:
+    m_OverrideState: 0
+    m_Value: 0.667
+  _MultiScatteringOcclusion:
+    m_OverrideState: 0
+    m_Value: 0.25
+  _MultiScatteringEccentricity:
+    m_OverrideState: 0
+    m_Value: 0.18
+  _Albedo:
+    m_OverrideState: 0
+    m_Value: {x: 0.98, y: 0.98, z: 0.98, w: 0}
+  _AmbientOcclusion:
+    m_OverrideState: 0
+    m_Value: 1
+  _SkyTextureScaleKm:
+    m_OverrideState: 0
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 0
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 0
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 0
+    m_Value: 0.2
+  _CloudDensity:
+    m_OverrideState: 0
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 0
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 0
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _LightningTexScale:
+    m_OverrideState: 0
+    m_Value: 6
+  _LightningFlicker:
+    m_OverrideState: 0
+    m_Value: 0
+  _LightningTime:
+    m_OverrideState: 0
+    m_Value: 0
+  _LightMaskBias:
+    m_OverrideState: 0
+    m_Value: 0
+  _LightMaskIntensity:
+    m_OverrideState: 0
+    m_Value: 5
+  _LightningSpread:
+    m_OverrideState: 0
+    m_Value: 0.175
+  _LightningPower:
+    m_OverrideState: 0
+    m_Value: 6
+  _FillLightningScatter:
+    m_OverrideState: 0
+    m_Value: 0.05
+  _ScatteringTexAmount:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _LightingBrightness:
+    m_OverrideState: 0
+    m_Value: 100000
+  _LightningColor:
+    m_OverrideState: 0
+    m_Value: {x: 2, y: 1.8, z: 2, w: 0.3}
+  _LightningMip:
+    m_OverrideState: 0
+    m_Value: 2.5
+  _GroundAlbedo:
+    m_OverrideState: 0
+    m_Value: {x: 0.667, y: 0.667, z: 0.667}
+  _AdditiveMaskContribution:
+    m_OverrideState: 0
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 0
+    m_Value: 0
+  _WindVector:
+    m_OverrideState: 0
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _Noise1Scale:
+    m_OverrideState: 0
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 0
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 0
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 0
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 0
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 0
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 0
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 0
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 0
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 0
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 0
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 0
+    m_Value: 0.529193
+  _CloudLayerBottomHeightMeter:
+    m_OverrideState: 0
+    m_Value: 1500
+  _CloudLayerHeightMeter:
+    m_OverrideState: 0
+    m_Value: 3000
+  _CloudTransmittanceThreshold:
+    m_OverrideState: 0
+    m_Value: 0.0001
+  _FogColor:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _FogDensityFirst:
+    m_OverrideState: 0
+    m_Value: 0.04
+  _FogHeightFalloffFirst:
+    m_OverrideState: 0
+    m_Value: 0.2
+  _FogHeight:
+    m_OverrideState: 0
+    m_Value: 10000
+  _FogDensitySecond:
+    m_OverrideState: 0
+    m_Value: 0
+  _FogHeightFalloffSecond:
+    m_OverrideState: 0
+    m_Value: 0.2
+  _FogHeightSecond:
+    m_OverrideState: 0
+    m_Value: 10000
+  _FogStartDistance:
+    m_OverrideState: 0
+    m_Value: 0
+  _FogCutoffDistance:
+    m_OverrideState: 0
+    m_Value: 0
+  _MaxWorldObserverHeight:
+    m_OverrideState: 0
+    m_Value: 10000
+  _DirectionalInscatteringColor:
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  _SkyAtmosphereHeightFogContribution:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _AtmosphereLightIlluminanceOnGroundPostTransmittance:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _InscatteringLightStartDistance:
+    m_OverrideState: 0
+    m_Value: 10000
+  _CloudLayoutTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _CloudProfileTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _AdditiveMaskTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _BlueNoise:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _Noise3DTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _TransmittanceLutTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _AerialPerspectiveVolumeTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _Light3DTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+--- !u!114 &-8257796550965157511
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 30000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.7
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 6
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 0.95
+--- !u!114 &-7827445620791179658
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 30000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.7
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 8
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 0.943
+--- !u!114 &-7657422843270312269
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudPassSetting
+  m_EditorClassIdentifier: CYEngineRuntime:CYPostProcessing:VolumetricCloudPassSetting
+  active: 1
+  _EnableVolumetricCloud:
+    m_OverrideState: 1
+    m_Value: 1
+  _AtmosphericLightCloudScatteredLuminanceScale:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _TracingStartMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 350
+  _TracingMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 500
+  _ShadowTracingMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 15
+  _ShadowSampleCountMax:
+    m_OverrideState: 1
+    m_Value: 6
+  _OutputPreExposure:
+    m_OverrideState: 1
+    m_Value: 1
+  _SkyLightCloudBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 0
+  _SkyLightScatteredLuminanceScale:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseA:
+    m_OverrideState: 1
+    m_Value: 0.8
+  _PhaseB:
+    m_OverrideState: 1
+    m_Value: 0.167
+  _PhaseBlend:
+    m_OverrideState: 1
+    m_Value: 0.575
+  _MultiScatteringContribution:
+    m_OverrideState: 1
+    m_Value: 0.667
+  _MultiScatteringOcclusion:
+    m_OverrideState: 1
+    m_Value: 0.25
+  _MultiScatteringEccentricity:
+    m_OverrideState: 1
+    m_Value: 0.18
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.98, y: 0.98, z: 0.98, w: 0}
+  _AmbientOcclusion:
+    m_OverrideState: 1
+    m_Value: 1
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _LightningTexScale:
+    m_OverrideState: 1
+    m_Value: 6
+  _LightningFlicker:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightningTime:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightMaskBias:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightMaskIntensity:
+    m_OverrideState: 1
+    m_Value: 5
+  _LightningSpread:
+    m_OverrideState: 1
+    m_Value: 0.175
+  _LightningPower:
+    m_OverrideState: 1
+    m_Value: 6
+  _FillLightningScatter:
+    m_OverrideState: 1
+    m_Value: 0.05
+  _ScatteringTexAmount:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _LightingBrightness:
+    m_OverrideState: 1
+    m_Value: 100000
+  _LightningColor:
+    m_OverrideState: 1
+    m_Value: {x: 2, y: 1.8, z: 2, w: 0.3}
+  _LightningMip:
+    m_OverrideState: 1
+    m_Value: 2.5
+  _GroundAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.667, y: 0.667, z: 0.667}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _CloudLayerBottomHeightMeter:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerHeightMeter:
+    m_OverrideState: 1
+    m_Value: 3000
+  _CloudTransmittanceThreshold:
+    m_OverrideState: 1
+    m_Value: 0.0001
+  _FogColor:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _FogDensityFirst:
+    m_OverrideState: 1
+    m_Value: 0.04
+  _FogHeightFalloffFirst:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _FogHeight:
+    m_OverrideState: 1
+    m_Value: 10000
+  _FogDensitySecond:
+    m_OverrideState: 1
+    m_Value: 0
+  _FogHeightFalloffSecond:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _FogHeightSecond:
+    m_OverrideState: 1
+    m_Value: 10000
+  _FogStartDistance:
+    m_OverrideState: 1
+    m_Value: 0
+  _FogCutoffDistance:
+    m_OverrideState: 1
+    m_Value: 0
+  _MaxWorldObserverHeight:
+    m_OverrideState: 1
+    m_Value: 10000
+  _DirectionalInscatteringColor:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  _SkyAtmosphereHeightFogContribution:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _AtmosphereLightIlluminanceOnGroundPostTransmittance:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _InscatteringLightStartDistance:
+    m_OverrideState: 1
+    m_Value: 10000
+  _CloudLayoutTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: a38c884893167c24c8627a1030e24261, type: 3}
+  _CloudProfileTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 0a3b12c789959a34ab242e014ed4a830, type: 3}
+  _AdditiveMaskTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 54b5daa2aea970d4d884c0158e356302, type: 3}
+  _BlueNoise:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 6a8715d5a5f2a0442a2e858a8a550b37, type: 3}
+  _Noise3DTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 11700000, guid: 94980cef28fb5cf4792c7299a1d965fa, type: 2}
+  _TransmittanceLutTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: f6f4e7d06b6443a4a99e8d8d768aeffd, type: 3}
+  _AerialPerspectiveVolumeTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 11700000, guid: e410a12427a41b24dade3e2e3b048316, type: 2}
+  _Light3DTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 11700000, guid: 2ad39679e855e894b899ed56b3f35a1b, type: 2}
+--- !u!114 &-6986439033276347832
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
+  m_Name: Tonemapping
+  m_EditorClassIdentifier: 
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 2
+--- !u!114 &-6349156686562992810
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 40000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.9
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: 0.9
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 0.95
+--- !u!114 &-6084155316982159767
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 30000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 4
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.7
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.505
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 8
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0, z: 0, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 0.95
+--- !u!114 &-4479090362308195992
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 40000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 60
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 5
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.78
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: 0.88
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.43
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 2.45
+  _AmbientLightingTint:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 0
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 0
+    m_Value: 0.95
+--- !u!114 &-4169637324321229879
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 30000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.973
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.209
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.597
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.33
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.552283
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 2.29
+  _AmbientLightingTint:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 0
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 0
+    m_Value: 0.95
+--- !u!114 &-3437350958155766843
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudPassSetting
+  m_EditorClassIdentifier: CYEngineRuntime:CYPostProcessing:VolumetricCloudPassSetting
+  active: 1
+  _EnableVolumetricCloud:
+    m_OverrideState: 0
+    m_Value: 1
+  _AtmosphericLightCloudScatteredLuminanceScale:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1}
+  _TracingStartMaxDistanceKm:
+    m_OverrideState: 0
+    m_Value: 350
+  _TracingMaxDistanceKm:
+    m_OverrideState: 0
+    m_Value: 500
+  _ShadowTracingMaxDistanceKm:
+    m_OverrideState: 0
+    m_Value: 15
+  _ShadowSampleCountMax:
+    m_OverrideState: 0
+    m_Value: 6
+  _OutputPreExposure:
+    m_OverrideState: 0
+    m_Value: 1
+  _SkyLightCloudBottomVisibility:
+    m_OverrideState: 0
+    m_Value: 0
+  _SkyLightScatteredLuminanceScale:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseA:
+    m_OverrideState: 0
+    m_Value: 0.8
+  _PhaseB:
+    m_OverrideState: 0
+    m_Value: 0.167
+  _PhaseBlend:
+    m_OverrideState: 0
+    m_Value: 0.575
+  _MultiScatteringContribution:
+    m_OverrideState: 0
+    m_Value: 0.667
+  _MultiScatteringOcclusion:
+    m_OverrideState: 0
+    m_Value: 0.25
+  _MultiScatteringEccentricity:
+    m_OverrideState: 0
+    m_Value: 0.18
+  _Albedo:
+    m_OverrideState: 0
+    m_Value: {x: 0.98, y: 0.98, z: 0.98, w: 0}
+  _AmbientOcclusion:
+    m_OverrideState: 0
+    m_Value: 1
+  _SkyTextureScaleKm:
+    m_OverrideState: 0
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 0
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 0
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 0
+    m_Value: 0.2
+  _CloudDensity:
+    m_OverrideState: 0
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 0
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 0
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _LightningTexScale:
+    m_OverrideState: 0
+    m_Value: 6
+  _LightningFlicker:
+    m_OverrideState: 0
+    m_Value: 0
+  _LightningTime:
+    m_OverrideState: 0
+    m_Value: 0
+  _LightMaskBias:
+    m_OverrideState: 0
+    m_Value: 0
+  _LightMaskIntensity:
+    m_OverrideState: 0
+    m_Value: 5
+  _LightningSpread:
+    m_OverrideState: 0
+    m_Value: 0.175
+  _LightningPower:
+    m_OverrideState: 0
+    m_Value: 6
+  _FillLightningScatter:
+    m_OverrideState: 0
+    m_Value: 0.05
+  _ScatteringTexAmount:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _LightingBrightness:
+    m_OverrideState: 0
+    m_Value: 100000
+  _LightningColor:
+    m_OverrideState: 0
+    m_Value: {x: 2, y: 1.8, z: 2, w: 0.3}
+  _LightningMip:
+    m_OverrideState: 0
+    m_Value: 2.5
+  _GroundAlbedo:
+    m_OverrideState: 0
+    m_Value: {x: 0.667, y: 0.667, z: 0.667}
+  _AdditiveMaskContribution:
+    m_OverrideState: 0
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 0
+    m_Value: 0
+  _WindVector:
+    m_OverrideState: 0
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _Noise1Scale:
+    m_OverrideState: 0
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 0
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 0
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 0
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 0
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 0
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 0
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 0
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 0
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 0
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 0
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 0
+    m_Value: 0.529193
+  _CloudLayerBottomHeightMeter:
+    m_OverrideState: 0
+    m_Value: 1500
+  _CloudLayerHeightMeter:
+    m_OverrideState: 0
+    m_Value: 3000
+  _CloudTransmittanceThreshold:
+    m_OverrideState: 0
+    m_Value: 0.0001
+  _FogColor:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _FogDensityFirst:
+    m_OverrideState: 0
+    m_Value: 0.04
+  _FogHeightFalloffFirst:
+    m_OverrideState: 0
+    m_Value: 0.2
+  _FogHeight:
+    m_OverrideState: 0
+    m_Value: 10000
+  _FogDensitySecond:
+    m_OverrideState: 0
+    m_Value: 0
+  _FogHeightFalloffSecond:
+    m_OverrideState: 0
+    m_Value: 0.2
+  _FogHeightSecond:
+    m_OverrideState: 0
+    m_Value: 10000
+  _FogStartDistance:
+    m_OverrideState: 0
+    m_Value: 0
+  _FogCutoffDistance:
+    m_OverrideState: 0
+    m_Value: 0
+  _MaxWorldObserverHeight:
+    m_OverrideState: 0
+    m_Value: 10000
+  _DirectionalInscatteringColor:
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  _SkyAtmosphereHeightFogContribution:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _AtmosphereLightIlluminanceOnGroundPostTransmittance:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _InscatteringLightStartDistance:
+    m_OverrideState: 0
+    m_Value: 10000
+  _CloudLayoutTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _CloudProfileTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _AdditiveMaskTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _BlueNoise:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _Noise3DTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _TransmittanceLutTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _AerialPerspectiveVolumeTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  _Light3DTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+--- !u!114 &-3133773911031080683
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc215a981c622ef4c822db61d563727c, type: 3}
+  m_Name: VolumetricCloud
+  m_EditorClassIdentifier: 
+  active: 1
+  _EnableVolumetricCloud:
+    m_OverrideState: 1
+    m_Value: 1
+  _AtmosphericLightCloudScatteredLuminanceScale:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _TracingStartMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 350
+  _TracingMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 500
+  _ShadowTracingMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 15
+  _ShadowSampleCountMax:
+    m_OverrideState: 1
+    m_Value: 6
+  _OutputPreExposure:
+    m_OverrideState: 1
+    m_Value: 1
+  _SkyLightCloudBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 0
+  _SkyLightScatteredLuminanceScale:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseA:
+    m_OverrideState: 1
+    m_Value: 0.8
+  _PhaseB:
+    m_OverrideState: 1
+    m_Value: 0.167
+  _PhaseBlend:
+    m_OverrideState: 1
+    m_Value: 0.575
+  _MultiScatteringContribution:
+    m_OverrideState: 1
+    m_Value: 0.667
+  _MultiScatteringOcclusion:
+    m_OverrideState: 1
+    m_Value: 0.25
+  _MultiScatteringEccentricity:
+    m_OverrideState: 1
+    m_Value: 0.18
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.98, y: 0.98, z: 0.98, w: 0}
+  _AmbientOcclusion:
+    m_OverrideState: 1
+    m_Value: 1
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _LightningTexScale:
+    m_OverrideState: 1
+    m_Value: 6
+  _LightningFlicker:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightningTime:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightMaskBias:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightMaskIntensity:
+    m_OverrideState: 1
+    m_Value: 5
+  _LightningSpread:
+    m_OverrideState: 1
+    m_Value: 0.175
+  _LightningPower:
+    m_OverrideState: 1
+    m_Value: 6
+  _FillLightningScatter:
+    m_OverrideState: 1
+    m_Value: 0.05
+  _ScatteringTexAmount:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _LightingBrightness:
+    m_OverrideState: 1
+    m_Value: 100000
+  _LightningColor:
+    m_OverrideState: 1
+    m_Value: {x: 2, y: 1.8, z: 2, w: 0.3}
+  _LightningMip:
+    m_OverrideState: 1
+    m_Value: 2.5
+  _GroundAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.667, y: 0.667, z: 0.667}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _CloudLayerBottomHeightMeter:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerHeightMeter:
+    m_OverrideState: 1
+    m_Value: 3000
+  _CloudTransmittanceThreshold:
+    m_OverrideState: 1
+    m_Value: 0.0001
+  _FogColor:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _FogDensityFirst:
+    m_OverrideState: 1
+    m_Value: 0.04
+  _FogHeightFalloffFirst:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _FogHeight:
+    m_OverrideState: 1
+    m_Value: 10000
+  _FogDensitySecond:
+    m_OverrideState: 1
+    m_Value: 0
+  _FogHeightFalloffSecond:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _FogHeightSecond:
+    m_OverrideState: 1
+    m_Value: 10000
+  _FogStartDistance:
+    m_OverrideState: 1
+    m_Value: 0
+  _FogCutoffDistance:
+    m_OverrideState: 1
+    m_Value: 0
+  _MaxWorldObserverHeight:
+    m_OverrideState: 1
+    m_Value: 10000
+  _DirectionalInscatteringColor:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  _SkyAtmosphereHeightFogContribution:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _AtmosphereLightIlluminanceOnGroundPostTransmittance:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _InscatteringLightStartDistance:
+    m_OverrideState: 1
+    m_Value: 10000
+--- !u!114 &-2655231335023716344
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c0b77c36c9b8d4caee2a91414b8db8, type: 3}
+  m_Name: VolumetricCloud
+  m_EditorClassIdentifier: 
+  active: 1
+  _Enable:
+    m_OverrideState: 0
+    m_Value: 1
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 0
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 0
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 0
+    m_Value: 3000
+  _TracingStartMaxDistance:
+    m_OverrideState: 0
+    m_Value: 1000
+  _NumPrimarySteps:
+    m_OverrideState: 0
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 0
+    m_Value: 6
+  _WindDirection:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1}
+  _LargeWindSpeed:
+    m_OverrideState: 0
+    m_Value: 0
+  _MediumWindSpeed:
+    m_OverrideState: 0
+    m_Value: 0
+  _SmallWindSpeed:
+    m_OverrideState: 0
+    m_Value: 0
+  _CloudMapTiling:
+    m_OverrideState: 0
+    m_Value: {x: 100, y: 100, z: 0, w: 0}
+  _BaseShapeNoiseTiling:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1}
+  _DetailNoiseTiling:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1}
+  _BlueNoiseTiling:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 0, w: 0}
+  _AltitudeDistortion:
+    m_OverrideState: 0
+    m_Value: 0
+  _ShapeScale:
+    m_OverrideState: 0
+    m_Value: 1
+  _ShapeNoiseOffest:
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0}
+  _VerticalShapeNoiseOffset:
+    m_OverrideState: 0
+    m_Value: 0
+  _VerticalShapeWindDisplacement:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _DetailScale:
+    m_OverrideState: 0
+    m_Value: 1
+  _DetailNoiseOffset:
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0}
+  _VerticlDetailNoiseOffset:
+    m_OverrideState: 0
+    m_Value: 0
+  _VerticalErosionWindDisplacement:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _DensityMultiplier:
+    m_OverrideState: 0
+    m_Value: 1
+  _CoverageMultiplier:
+    m_OverrideState: 0
+    m_Value: 1
+  _FadeInStart:
+    m_OverrideState: 0
+    m_Value: 0
+  _FadeInDistance:
+    m_OverrideState: 0
+    m_Value: 5000
+  _Albedo:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 0
+    m_Value: 0.9
+  _PhaseG1:
+    m_OverrideState: 0
+    m_Value: 0.9
+  _PhaseBlendWeight:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  _SilverSpread:
+    m_OverrideState: 0
+    m_Value: 0
+  _PowderEffectIntensity:
+    m_OverrideState: 0
+    m_Value: 0.5
+--- !u!114 &-2634835984132115087
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ad8f4d7679906409c1d4607b83c64a, type: 3}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: 
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 1
+    m_Value: 1
+  _Local:
+    m_OverrideState: 0
+    m_Value: 0
+  _BlueNoiseIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 3000
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 8000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 157061
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 256
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _FadeInStart:
+    m_OverrideState: 1
+    m_Value: 0
+  _FadeInDistance:
+    m_OverrideState: 1
+    m_Value: 0
+  _HeightGradientMin:
+    m_OverrideState: 1
+    m_Value: 0.169
+  _HeightGradientMax:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudDensityFirstLayer:
+    m_OverrideState: 1
+    m_Value: 2
+  _CloudFirstLayerdDensityPow:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudDensitySecondLayer:
+    m_OverrideState: 1
+    m_Value: 0
+  _CloudSecondLayerdDensityPow:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindDirection:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0}
+  _MediumWindSpeed:
+    m_OverrideState: 1
+    m_Value: 0
+  _LargeWindSpeed:
+    m_OverrideState: 1
+    m_Value: 0
+  _SmallWindSpeed:
+    m_OverrideState: 1
+    m_Value: 0
+  _VerticalShapeWindDisplacement:
+    m_OverrideState: 1
+    m_Value: 0
+  _ShapeScaleFirstLayer:
+    m_OverrideState: 1
+    m_Value: 3.5
+  _ShapeFactorFirstLayer:
+    m_OverrideState: 1
+    m_Value: 0.75
+  _ShapeScaleSecondLayer:
+    m_OverrideState: 1
+    m_Value: 4
+  _ShapeFactorSecondLayer:
+    m_OverrideState: 1
+    m_Value: 0.812
+  _ShapeNoiseOffset:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0}
+  _VerticalShapeNoiseOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _AltitudeDistortionFirstLayer:
+    m_OverrideState: 1
+    m_Value: 0
+  _AltitudeDistortionSecondLayer:
+    m_OverrideState: 1
+    m_Value: 0
+  _CloudMapTiling:
+    m_OverrideState: 1
+    m_Value: {x: 100, y: 100, z: 0, w: 0}
+  _ErosionFactorFirstLayer:
+    m_OverrideState: 1
+    m_Value: 1
+  _ErosionScaleFirstLayer:
+    m_OverrideState: 1
+    m_Value: 20
+  _ErosionFactorSecondLayer:
+    m_OverrideState: 1
+    m_Value: 1
+  _ErosionScaleSecondLayer:
+    m_OverrideState: 1
+    m_Value: 20
+  _ErosionFactorCompensationFirstLayer:
+    m_OverrideState: 1
+    m_Value: 1
+  _ErosionFactorCompensationSecondLayer:
+    m_OverrideState: 1
+    m_Value: 0.918
+  billowy_type_gradient:
+    m_OverrideState: 1
+    m_Value: 1
+  wispy_noise_gradient:
+    m_OverrideState: 1
+    m_Value: 1
+  _PackingNoiseChannelRWeight:
+    m_OverrideState: 1
+    m_Value: 1
+  _PackingNoiseChannelGWeight:
+    m_OverrideState: 1
+    m_Value: 1
+  _PackingNoiseChannelBWeight:
+    m_OverrideState: 1
+    m_Value: 0.3
+  _PackingNoiseChannelAWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _HHFNoiseFrequencyHigh:
+    m_OverrideState: 1
+    m_Value: 1.39
+  _HHFNoiseFrequencyLow:
+    m_OverrideState: 1
+    m_Value: 2
+  _HHFNoiseType:
+    m_OverrideState: 1
+    m_Value: 1
+  _PowderEffectIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  CumulusDensityCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.15
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulusErosionCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulusCloudTypeHeightCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  AltoStratusDensityCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  AltoStratusErosionCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  AltoStratusCloudTypeHeightCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulonimbusDensityCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulonimbusErosionCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulonimbusCloudTypeHeightCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.7
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 8
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &-1556893508724232495
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 40000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.9
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: 0.9
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 8
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 0
+    m_Value: 0.95
+--- !u!114 &-743735261897840342
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 10000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.9
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.2
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 8
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 0.95
+--- !u!114 &-99364759452118436
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 40000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.817
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: 0.694
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.157
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 7.5
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 0
+    m_Value: 0.95
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: Global Volume Profile 2
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: -6986439033276347832}
+  - {fileID: 7661433629699211007}
+  - {fileID: -2634835984132115087}
+--- !u!114 &495248077932747983
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 1
+    m_Value: 1
+  _BlueNoiseIntensity:
+    m_OverrideState: 1
+    m_Value: 0
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 10000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 8
+  _FadeInStart:
+    m_OverrideState: 1
+    m_Value: 561
+  _FadeInDistance:
+    m_OverrideState: 1
+    m_Value: 4239
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.7
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 8.39
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 0.649
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 10, y: 0, z: 0, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.87, y: 0.95, z: 0.87, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 1
+    m_Value: 0.8
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &905965400716033780
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 40000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.9
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.901
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 6
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 300
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 0
+    m_Value: 0.95
+--- !u!114 &1342218435458387490
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 40000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.9
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: 0.9
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 8
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 0
+    m_Value: 0.95
+--- !u!114 &1477595808863804711
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fded815a74dd80438799be7662f86ef, type: 3}
+  m_Name: SunShaft
+  m_EditorClassIdentifier: 
+  active: 1
+  _enableSunShaftsEffect:
+    m_OverrideState: 1
+    m_Value: 1
+  _sunTransformForward:
+    m_OverrideState: 0
+    m_Value: {x: 0.5, y: 0.5, z: 0}
+  _sunShaftsIntensity:
+    m_OverrideState: 1
+    m_Value: 0.89
+  _sunShaftsColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 0.94553167, b: 0.773, a: 1}
+  _SunShaftRange:
+    m_OverrideState: 1
+    m_Value: 0.25
+  _SunShaftFadeRange:
+    m_OverrideState: 0
+    m_Value: 2
+  _SunShaftMaskRange:
+    m_OverrideState: 0
+    m_Value: 1
+  _sunShaftsUseDepth:
+    m_OverrideState: 0
+    m_Value: 0
+  _sunShaftsThreshold:
+    m_OverrideState: 0
+    m_Value: {r: 0.87, g: 0.74, b: 0.65, a: 1}
+  _sunShaftBlurRadius:
+    m_OverrideState: 0
+    m_Value: 2.5
+  _sunShaftsMaxRadius:
+    m_OverrideState: 0
+    m_Value: 1
+  allowSunShaftEffect:
+    m_OverrideState: 0
+    m_Value: 1
+  quality:
+    m_OverrideState: 0
+    m_Value: 2
+--- !u!114 &2540391982115889335
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudPassSetting
+  m_EditorClassIdentifier: CYEngineRuntime:CYPostProcessing:VolumetricCloudPassSetting
+  active: 1
+  _EnableVolumetricCloud:
+    m_OverrideState: 1
+    m_Value: 1
+  _AtmosphericLightCloudScatteredLuminanceScale:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _TracingStartMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 350
+  _TracingMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 500
+  _ShadowTracingMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 15
+  _ShadowSampleCountMax:
+    m_OverrideState: 1
+    m_Value: 6
+  _OutputPreExposure:
+    m_OverrideState: 1
+    m_Value: 1
+  _SkyLightCloudBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 0
+  _SkyLightScatteredLuminanceScale:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseA:
+    m_OverrideState: 1
+    m_Value: 0.8
+  _PhaseB:
+    m_OverrideState: 1
+    m_Value: 0.167
+  _PhaseBlend:
+    m_OverrideState: 1
+    m_Value: 0.575
+  _MultiScatteringContribution:
+    m_OverrideState: 1
+    m_Value: 0.667
+  _MultiScatteringOcclusion:
+    m_OverrideState: 1
+    m_Value: 0.25
+  _MultiScatteringEccentricity:
+    m_OverrideState: 1
+    m_Value: 0.18
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.98, y: 0.98, z: 0.98, w: 0}
+  _AmbientOcclusion:
+    m_OverrideState: 1
+    m_Value: 1
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _LightningTexScale:
+    m_OverrideState: 1
+    m_Value: 6
+  _LightningFlicker:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightningTime:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightMaskBias:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightMaskIntensity:
+    m_OverrideState: 1
+    m_Value: 5
+  _LightningSpread:
+    m_OverrideState: 1
+    m_Value: 0.175
+  _LightningPower:
+    m_OverrideState: 1
+    m_Value: 6
+  _FillLightningScatter:
+    m_OverrideState: 1
+    m_Value: 0.05
+  _ScatteringTexAmount:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _LightingBrightness:
+    m_OverrideState: 1
+    m_Value: 100000
+  _LightningColor:
+    m_OverrideState: 1
+    m_Value: {x: 2, y: 1.8, z: 2, w: 0.3}
+  _LightningMip:
+    m_OverrideState: 1
+    m_Value: 2.5
+  _GroundAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.667, y: 0.667, z: 0.667}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _CloudLayerBottomHeightMeter:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerHeightMeter:
+    m_OverrideState: 1
+    m_Value: 3000
+  _CloudTransmittanceThreshold:
+    m_OverrideState: 1
+    m_Value: 0.0001
+  _FogColor:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _FogDensityFirst:
+    m_OverrideState: 1
+    m_Value: 0.04
+  _FogHeightFalloffFirst:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _FogHeight:
+    m_OverrideState: 1
+    m_Value: 10000
+  _FogDensitySecond:
+    m_OverrideState: 1
+    m_Value: 0
+  _FogHeightFalloffSecond:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _FogHeightSecond:
+    m_OverrideState: 1
+    m_Value: 10000
+  _FogStartDistance:
+    m_OverrideState: 1
+    m_Value: 0
+  _FogCutoffDistance:
+    m_OverrideState: 1
+    m_Value: 0
+  _MaxWorldObserverHeight:
+    m_OverrideState: 1
+    m_Value: 10000
+  _DirectionalInscatteringColor:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  _SkyAtmosphereHeightFogContribution:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _AtmosphereLightIlluminanceOnGroundPostTransmittance:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _InscatteringLightStartDistance:
+    m_OverrideState: 1
+    m_Value: 10000
+  _CloudLayoutTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  _CloudProfileTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  _AdditiveMaskTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  _BlueNoise:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  _Noise3DTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  _TransmittanceLutTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  _AerialPerspectiveVolumeTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  _Light3DTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+--- !u!114 &2849555919952575697
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 40000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.9
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 20
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0, z: 0, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 0.95
+--- !u!114 &3018434963577869865
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 10000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.7
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 8
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 0.9
+--- !u!114 &3351197391082911402
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 40000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.9
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: 0.9
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 0.95
+--- !u!114 &3357141707549450929
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ad8f4d7679906409c1d4607b83c64a, type: 3}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: 
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 1
+    m_Value: 0
+  _Local:
+    m_OverrideState: 0
+    m_Value: 0
+  _BlueNoiseIntensity:
+    m_OverrideState: 1
+    m_Value: 0
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 774
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 4000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 10000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 512
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _FadeInStart:
+    m_OverrideState: 1
+    m_Value: 0
+  _FadeInDistance:
+    m_OverrideState: 1
+    m_Value: 168232
+  _HeightGradientMin:
+    m_OverrideState: 0
+    m_Value: 0
+  _HeightGradientMax:
+    m_OverrideState: 0
+    m_Value: 1
+  _CloudDensityFirstLayer:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudFirstLayerdDensityPow:
+    m_OverrideState: 0
+    m_Value: 1
+  _CloudDensitySecondLayer:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudSecondLayerdDensityPow:
+    m_OverrideState: 0
+    m_Value: 1
+  _WindDirection:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0}
+  _MediumWindSpeed:
+    m_OverrideState: 1
+    m_Value: 0
+  _LargeWindSpeed:
+    m_OverrideState: 1
+    m_Value: 0
+  _SmallWindSpeed:
+    m_OverrideState: 1
+    m_Value: 0
+  _VerticalShapeWindDisplacement:
+    m_OverrideState: 1
+    m_Value: 0
+  _ShapeScaleFirstLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ShapeFactorFirstLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ShapeScaleSecondLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ShapeFactorSecondLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ShapeNoiseOffset:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0}
+  _VerticalShapeNoiseOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _AltitudeDistortionFirstLayer:
+    m_OverrideState: 0
+    m_Value: 0
+  _AltitudeDistortionSecondLayer:
+    m_OverrideState: 0
+    m_Value: 0
+  _CloudMapTiling:
+    m_OverrideState: 1
+    m_Value: {x: 0.01, y: 0.01, z: 0, w: 0}
+  _ErosionFactorFirstLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ErosionScaleFirstLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ErosionFactorSecondLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ErosionScaleSecondLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ErosionFactorCompensationFirstLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  _ErosionFactorCompensationSecondLayer:
+    m_OverrideState: 0
+    m_Value: 1
+  billowy_type_gradient:
+    m_OverrideState: 0
+    m_Value: 1
+  wispy_noise_gradient:
+    m_OverrideState: 0
+    m_Value: 1
+  _PackingNoiseChannelRWeight:
+    m_OverrideState: 0
+    m_Value: 1
+  _PackingNoiseChannelGWeight:
+    m_OverrideState: 0
+    m_Value: 1
+  _PackingNoiseChannelBWeight:
+    m_OverrideState: 0
+    m_Value: 0.3
+  _PackingNoiseChannelAWeight:
+    m_OverrideState: 0
+    m_Value: 0.3
+  _HHFNoiseFrequencyHigh:
+    m_OverrideState: 0
+    m_Value: 4
+  _HHFNoiseFrequencyLow:
+    m_OverrideState: 0
+    m_Value: 2
+  _HHFNoiseType:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _PowderEffectIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  CumulusDensityCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4292972
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulusErosionCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulusCloudTypeHeightCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  AltoStratusDensityCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: -0.20854425
+        outSlope: -0.20854425
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4233507
+        value: 0.91171265
+        inSlope: -0.027720094
+        outSlope: -0.027720094
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0.15310407
+        outSlope: 0.15310407
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  AltoStratusErosionCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.40050805
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  AltoStratusCloudTypeHeightCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulonimbusDensityCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulonimbusErosionCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulonimbusCloudTypeHeightCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.7
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 8
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &3380812058270732337
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 40000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.9
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.2
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 20
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0, z: 0, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 0.603
+--- !u!114 &4502282843829588542
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86ed01348dd86e468fadcb8ca69f1af, type: 3}
+  m_Name: CustomTAA
+  m_EditorClassIdentifier: 
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 4
+  frameBlend:
+    m_OverrideState: 1
+    m_Value: 0.62
+  stability:
+    m_OverrideState: 1
+    m_Value: 1.5
+  sharpenStrength:
+    m_OverrideState: 1
+    m_Value: 0.9
+  historySharpening:
+    m_OverrideState: 1
+    m_Value: 0.722
+  workOnPrepass:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &5383507934454900360
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 10000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 64
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.7
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 8
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 1, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 0.95
+--- !u!114 &6025881274101271640
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudPassSetting
+  m_EditorClassIdentifier: CYEngineRuntime:CYPostProcessing:VolumetricCloudPassSetting
+  active: 1
+  _EnableVolumetricCloud:
+    m_OverrideState: 1
+    m_Value: 1
+  _AtmosphericLightCloudScatteredLuminanceScale:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _TracingStartMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 350
+  _TracingMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 500
+  _ShadowTracingMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 15
+  _ShadowSampleCountMax:
+    m_OverrideState: 1
+    m_Value: 6
+  _OutputPreExposure:
+    m_OverrideState: 1
+    m_Value: 1
+  _SkyLightCloudBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 0
+  _SkyLightScatteredLuminanceScale:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseA:
+    m_OverrideState: 1
+    m_Value: 0.8
+  _PhaseB:
+    m_OverrideState: 1
+    m_Value: 0.167
+  _PhaseBlend:
+    m_OverrideState: 1
+    m_Value: 0.575
+  _MultiScatteringContribution:
+    m_OverrideState: 1
+    m_Value: 0.667
+  _MultiScatteringOcclusion:
+    m_OverrideState: 1
+    m_Value: 0.25
+  _MultiScatteringEccentricity:
+    m_OverrideState: 1
+    m_Value: 0.18
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.98, y: 0.98, z: 0.98, w: 0}
+  _AmbientOcclusion:
+    m_OverrideState: 1
+    m_Value: 1
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _LightningTexScale:
+    m_OverrideState: 1
+    m_Value: 6
+  _LightningFlicker:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightningTime:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightMaskBias:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightMaskIntensity:
+    m_OverrideState: 1
+    m_Value: 5
+  _LightningSpread:
+    m_OverrideState: 1
+    m_Value: 0.175
+  _LightningPower:
+    m_OverrideState: 1
+    m_Value: 6
+  _FillLightningScatter:
+    m_OverrideState: 1
+    m_Value: 0.05
+  _ScatteringTexAmount:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _LightingBrightness:
+    m_OverrideState: 1
+    m_Value: 100000
+  _LightningColor:
+    m_OverrideState: 1
+    m_Value: {x: 2, y: 1.8, z: 2, w: 0.3}
+  _LightningMip:
+    m_OverrideState: 1
+    m_Value: 2.5
+  _GroundAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.667, y: 0.667, z: 0.667}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _CloudLayerBottomHeightMeter:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerHeightMeter:
+    m_OverrideState: 1
+    m_Value: 3000
+  _CloudTransmittanceThreshold:
+    m_OverrideState: 1
+    m_Value: 0.0001
+  _FogColor:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _FogDensityFirst:
+    m_OverrideState: 1
+    m_Value: 0.04
+  _FogHeightFalloffFirst:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _FogHeight:
+    m_OverrideState: 1
+    m_Value: 10000
+  _FogDensitySecond:
+    m_OverrideState: 1
+    m_Value: 0
+  _FogHeightFalloffSecond:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _FogHeightSecond:
+    m_OverrideState: 1
+    m_Value: 10000
+  _FogStartDistance:
+    m_OverrideState: 1
+    m_Value: 0
+  _FogCutoffDistance:
+    m_OverrideState: 1
+    m_Value: 0
+  _MaxWorldObserverHeight:
+    m_OverrideState: 1
+    m_Value: 10000
+  _DirectionalInscatteringColor:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  _SkyAtmosphereHeightFogContribution:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _AtmosphereLightIlluminanceOnGroundPostTransmittance:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _InscatteringLightStartDistance:
+    m_OverrideState: 1
+    m_Value: 10000
+  _CloudLayoutTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: a38c884893167c24c8627a1030e24261, type: 3}
+  _CloudProfileTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 0a3b12c789959a34ab242e014ed4a830, type: 3}
+  _AdditiveMaskTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 54b5daa2aea970d4d884c0158e356302, type: 3}
+  _BlueNoise:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 6a8715d5a5f2a0442a2e858a8a550b37, type: 3}
+  _Noise3DTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 11700000, guid: 94980cef28fb5cf4792c7299a1d965fa, type: 2}
+  _TransmittanceLutTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: f6f4e7d06b6443a4a99e8d8d768aeffd, type: 3}
+  _AerialPerspectiveVolumeTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 11700000, guid: e410a12427a41b24dade3e2e3b048316, type: 2}
+  _Light3DTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 11700000, guid: 2ad39679e855e894b899ed56b3f35a1b, type: 2}
+--- !u!114 &6221198010639994340
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: Assembly-CSharp::VolumetricCloudsRenderPassSetting
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 0
+    m_Value: 2
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 3000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 40000
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 512
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 4
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.78
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: 0.888
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 6.32
+  _AmbientLightingTint:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 0
+    m_Value: 1
+  _WindVector:
+    m_OverrideState: 0
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _SkyTextureScaleKm:
+    m_OverrideState: 0
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 0
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 0
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 0
+    m_Value: 0.2
+  _CloudDensity:
+    m_OverrideState: 0
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 0
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 0
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _AdditiveMaskContribution:
+    m_OverrideState: 0
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 0
+    m_Value: 0
+  _Noise1Scale:
+    m_OverrideState: 0
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 0
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 0
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 0
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 0
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 0
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 0
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 0
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 0
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 0
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 0
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 0
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 0
+    m_Value: 0.529193
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 0
+    m_Value: 0.95
+--- !u!114 &7042902508391222644
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VolumetricCloudPassSetting
+  m_EditorClassIdentifier: CYEngineRuntime:CYPostProcessing:VolumetricCloudPassSetting
+  active: 1
+  _EnableVolumetricCloud:
+    m_OverrideState: 1
+    m_Value: 1
+  _AtmosphericLightCloudScatteredLuminanceScale:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _TracingStartMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 350
+  _TracingMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 500
+  _ShadowTracingMaxDistanceKm:
+    m_OverrideState: 1
+    m_Value: 15
+  _ShadowSampleCountMax:
+    m_OverrideState: 1
+    m_Value: 6
+  _OutputPreExposure:
+    m_OverrideState: 1
+    m_Value: 1
+  _SkyLightCloudBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _SkyLightScatteredLuminanceScale:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseA:
+    m_OverrideState: 1
+    m_Value: 0.8
+  _PhaseB:
+    m_OverrideState: 1
+    m_Value: 0.167
+  _PhaseBlend:
+    m_OverrideState: 1
+    m_Value: 0.356709
+  _MultiScatteringContribution:
+    m_OverrideState: 1
+    m_Value: 0.552283
+  _MultiScatteringOcclusion:
+    m_OverrideState: 1
+    m_Value: 0.33
+  _MultiScatteringEccentricity:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.98, y: 0.98, z: 0.98, w: 0}
+  _AmbientOcclusion:
+    m_OverrideState: 1
+    m_Value: 1
+  _SkyTextureScaleKm:
+    m_OverrideState: 1
+    m_Value: 310
+  _SkyTextureScalePerChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _SkyTexturePlacement:
+    m_OverrideState: 1
+    m_Value: {x: 0.03, y: 0.05, z: 0, w: 0}
+  _CloudChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 0.89, y: 0.98, z: 0.6, w: 0}
+  _CloudCoverage:
+    m_OverrideState: 1
+    m_Value: 1.2
+  _CloudDensity:
+    m_OverrideState: 1
+    m_Value: 2
+  _Stormy:
+    m_OverrideState: 1
+    m_Value: 0
+  _StormCloudAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.3, y: 0.338, z: 0.375}
+  _LightningTexScale:
+    m_OverrideState: 1
+    m_Value: 6
+  _LightningFlicker:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightningTime:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightMaskBias:
+    m_OverrideState: 1
+    m_Value: 0
+  _LightMaskIntensity:
+    m_OverrideState: 1
+    m_Value: 5
+  _LightningSpread:
+    m_OverrideState: 1
+    m_Value: 0.175
+  _LightningPower:
+    m_OverrideState: 1
+    m_Value: 6
+  _FillLightningScatter:
+    m_OverrideState: 1
+    m_Value: 0.05
+  _ScatteringTexAmount:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _LightingBrightness:
+    m_OverrideState: 1
+    m_Value: 100000
+  _LightningColor:
+    m_OverrideState: 1
+    m_Value: {x: 2, y: 1.8, z: 2, w: 0.3}
+  _LightningMip:
+    m_OverrideState: 1
+    m_Value: 2.5
+  _GroundAlbedo:
+    m_OverrideState: 1
+    m_Value: {x: 0.667, y: 0.667, z: 0.667}
+  _AdditiveMaskContribution:
+    m_OverrideState: 1
+    m_Value: 0
+  _AdditiveMaskPerChannelWeight:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _AdditiveMaskContribOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _WindVector:
+    m_OverrideState: 1
+    m_Value: {x: 0.775, y: -0.643904, z: 1.098385, w: 0}
+  _Noise1Scale:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 10, z: 4.4, w: 1}
+  _Noise1Speed:
+    m_OverrideState: 1
+    m_Value: 1
+  _Noise1Bias:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _Noise1Strength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _Noise2Scale:
+    m_OverrideState: 1
+    m_Value: {x: 36, y: 70.15654, z: 36, w: 1}
+  _Noise2Speed:
+    m_OverrideState: 1
+    m_Value: -12
+  _Noise2Bias:
+    m_OverrideState: 1
+    m_Value: 0.44
+  _Noise2Strength:
+    m_OverrideState: 1
+    m_Value: 0.48
+  _Noise3Scale:
+    m_OverrideState: 1
+    m_Value: {x: 30, y: 25, z: 40, w: 1}
+  _Noise3Speed:
+    m_OverrideState: 1
+    m_Value: 4
+  _Noise3Bias:
+    m_OverrideState: 1
+    m_Value: -1.216617
+  _Noise3Strength:
+    m_OverrideState: 1
+    m_Value: 0.006
+  _MultChannel:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0, w: 0}
+  _MultStrength:
+    m_OverrideState: 1
+    m_Value: 0.529193
+  _CloudLayerBottomHeightMeter:
+    m_OverrideState: 1
+    m_Value: 1500
+  _CloudLayerHeightMeter:
+    m_OverrideState: 1
+    m_Value: 3000
+  _CloudTransmittanceThreshold:
+    m_OverrideState: 1
+    m_Value: 0.0001
+  _FogColor:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _FogDensityFirst:
+    m_OverrideState: 1
+    m_Value: 0.04
+  _FogHeightFalloffFirst:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _FogHeight:
+    m_OverrideState: 1
+    m_Value: 10000
+  _FogDensitySecond:
+    m_OverrideState: 1
+    m_Value: 0
+  _FogHeightFalloffSecond:
+    m_OverrideState: 1
+    m_Value: 0.2
+  _FogHeightSecond:
+    m_OverrideState: 1
+    m_Value: 10000
+  _FogStartDistance:
+    m_OverrideState: 1
+    m_Value: 0
+  _FogCutoffDistance:
+    m_OverrideState: 1
+    m_Value: 0
+  _MaxWorldObserverHeight:
+    m_OverrideState: 1
+    m_Value: 10000
+  _DirectionalInscatteringColor:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  _SkyAtmosphereHeightFogContribution:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _AtmosphereLightIlluminanceOnGroundPostTransmittance:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
+  _InscatteringLightStartDistance:
+    m_OverrideState: 1
+    m_Value: 10000
+  _CloudLayoutTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: a38c884893167c24c8627a1030e24261, type: 3}
+  _CloudProfileTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 0a3b12c789959a34ab242e014ed4a830, type: 3}
+  _AdditiveMaskTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 54b5daa2aea970d4d884c0158e356302, type: 3}
+  _BlueNoise:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 6a8715d5a5f2a0442a2e858a8a550b37, type: 3}
+  _Noise3DTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 11700000, guid: 94980cef28fb5cf4792c7299a1d965fa, type: 2}
+  _TransmittanceLutTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: f6f4e7d06b6443a4a99e8d8d768aeffd, type: 3}
+  _AerialPerspectiveVolumeTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 11700000, guid: e410a12427a41b24dade3e2e3b048316, type: 2}
+  _Light3DTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 11700000, guid: 2ad39679e855e894b899ed56b3f35a1b, type: 2}
+--- !u!114 &7661433629699211007
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  threshold:
+    m_OverrideState: 1
+    m_Value: 0.9
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
+  scatter:
+    m_OverrideState: 1
+    m_Value: 0.7
+  clamp:
+    m_OverrideState: 0
+    m_Value: 65472
+  tint:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  highQualityFiltering:
+    m_OverrideState: 0
+    m_Value: 0
+  skipIterations:
+    m_OverrideState: 0
+    m_Value: 1
+  dirtTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
+  dirtIntensity:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &9068438652805697010
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ad8f4d7679906409c1d4607b83c64a, type: 3}
+  m_Name: VolumetricCloudsRenderPassSetting
+  m_EditorClassIdentifier: 
+  active: 1
+  _Enable:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudQualityMode:
+    m_OverrideState: 1
+    m_Value: 1
+  _Local:
+    m_OverrideState: 0
+    m_Value: 0
+  _BlueNoiseIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudLayerBottomAltitude:
+    m_OverrideState: 1
+    m_Value: 3000
+  _CloudLayerThickness:
+    m_OverrideState: 1
+    m_Value: 8000
+  _RayMarchingMaxDistance:
+    m_OverrideState: 1
+    m_Value: 157061
+  _NumPrimarySteps:
+    m_OverrideState: 1
+    m_Value: 256
+  _NumLightSteps:
+    m_OverrideState: 1
+    m_Value: 6
+  _FadeInStart:
+    m_OverrideState: 1
+    m_Value: 0
+  _FadeInDistance:
+    m_OverrideState: 1
+    m_Value: 0
+  _HeightGradientMin:
+    m_OverrideState: 1
+    m_Value: 0.169
+  _HeightGradientMax:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudDensityFirstLayer:
+    m_OverrideState: 1
+    m_Value: 2
+  _CloudFirstLayerdDensityPow:
+    m_OverrideState: 1
+    m_Value: 1
+  _CloudDensitySecondLayer:
+    m_OverrideState: 1
+    m_Value: 0
+  _CloudSecondLayerdDensityPow:
+    m_OverrideState: 1
+    m_Value: 1
+  _WindDirection:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0}
+  _MediumWindSpeed:
+    m_OverrideState: 1
+    m_Value: 0
+  _LargeWindSpeed:
+    m_OverrideState: 1
+    m_Value: 0
+  _SmallWindSpeed:
+    m_OverrideState: 1
+    m_Value: 0
+  _VerticalShapeWindDisplacement:
+    m_OverrideState: 1
+    m_Value: 0
+  _ShapeScaleFirstLayer:
+    m_OverrideState: 1
+    m_Value: 3.5
+  _ShapeFactorFirstLayer:
+    m_OverrideState: 1
+    m_Value: 0.75
+  _ShapeScaleSecondLayer:
+    m_OverrideState: 1
+    m_Value: 4
+  _ShapeFactorSecondLayer:
+    m_OverrideState: 1
+    m_Value: 0.812
+  _ShapeNoiseOffset:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0}
+  _VerticalShapeNoiseOffset:
+    m_OverrideState: 1
+    m_Value: 0
+  _AltitudeDistortionFirstLayer:
+    m_OverrideState: 1
+    m_Value: 0
+  _AltitudeDistortionSecondLayer:
+    m_OverrideState: 1
+    m_Value: 0
+  _CloudMapTiling:
+    m_OverrideState: 1
+    m_Value: {x: 0.01, y: 0.01, z: 0, w: 0}
+  _ErosionFactorFirstLayer:
+    m_OverrideState: 1
+    m_Value: 1
+  _ErosionScaleFirstLayer:
+    m_OverrideState: 1
+    m_Value: 20
+  _ErosionFactorSecondLayer:
+    m_OverrideState: 1
+    m_Value: 1
+  _ErosionScaleSecondLayer:
+    m_OverrideState: 1
+    m_Value: 20
+  _ErosionFactorCompensationFirstLayer:
+    m_OverrideState: 1
+    m_Value: 1
+  _ErosionFactorCompensationSecondLayer:
+    m_OverrideState: 1
+    m_Value: 0.918
+  billowy_type_gradient:
+    m_OverrideState: 1
+    m_Value: 1
+  wispy_noise_gradient:
+    m_OverrideState: 1
+    m_Value: 1
+  _PackingNoiseChannelRWeight:
+    m_OverrideState: 1
+    m_Value: 1
+  _PackingNoiseChannelGWeight:
+    m_OverrideState: 1
+    m_Value: 1
+  _PackingNoiseChannelBWeight:
+    m_OverrideState: 1
+    m_Value: 0.3
+  _PackingNoiseChannelAWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _HHFNoiseFrequencyHigh:
+    m_OverrideState: 1
+    m_Value: 1.39
+  _HHFNoiseFrequencyLow:
+    m_OverrideState: 1
+    m_Value: 2
+  _HHFNoiseType:
+    m_OverrideState: 1
+    m_Value: 1
+  _PowderEffectIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  CumulusDensityCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.15
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulusErosionCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulusCloudTypeHeightCurve:
+    m_OverrideState: 1
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  AltoStratusDensityCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.09373218
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: Infinity
+        outSlope: -7.017865
+        tangentMode: 7
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.026248844
+      - serializedVersion: 3
+        time: 1
+        value: -0.0015258789
+        inSlope: -7.9710846
+        outSlope: -7.9710846
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.091024496
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  AltoStratusErosionCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  AltoStratusCloudTypeHeightCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulonimbusDensityCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulonimbusErosionCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CumulonimbusCloudTypeHeightCurve:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  _Albedo:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _PhaseG0:
+    m_OverrideState: 1
+    m_Value: 0.7
+  _PhaseG1:
+    m_OverrideState: 1
+    m_Value: -0.7
+  _PhaseBlendWeight:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsScattFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsExtinFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _MsPhaseFactor:
+    m_OverrideState: 1
+    m_Value: 0.5
+  _SilverIntensity:
+    m_OverrideState: 1
+    m_Value: 8
+  _AmbientLightingTint:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1}
+  _AmbientLightingBottomVisibility:
+    m_OverrideState: 1
+    m_Value: 1
+  _AmbientLuminanceIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  _TemporalAccumulationFactor:
+    m_OverrideState: 1
+    m_Value: 1

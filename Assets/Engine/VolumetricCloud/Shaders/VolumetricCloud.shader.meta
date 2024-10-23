@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: de9d99aa151a9884aa7cbdd5506b706d
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _MainTex: {instanceID: 0}
+  - _TransmittanceLutTexture: {fileID: 2800000, guid: e56910054a21f8043ad5230b1a8f9005,
+      type: 3}
+  - _ClouTypeTexture: {instanceID: 0}
+  - _BlueNoise2D: {fileID: 2800000, guid: a6486d568d74c7048811ed7a3237bfe2, type: 3}
+  - _CloudMapTexture: {fileID: 2800000, guid: be34fd782a4f66e409db711072e87dda, type: 3}
+  - _CloudLutTexture: {fileID: 2800000, guid: e0bcfddf26ed5584ba3d8b94d3200114, type: 3}
+  - _ErosionNoise: {fileID: 11700000, guid: 67839f5a605f86d41b110048e9ce86d8, type: 2}
+  - _Worley128RGBA: {fileID: 11700000, guid: 1fe54a721d0e2504e89f121c723404a8, type: 3}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
